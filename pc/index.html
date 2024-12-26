@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="page/main/style/banner.css" />
+    <link rel="stylesheet" href="page/main/style/imgNav.css" />
+    <link rel="stylesheet" href="page/main/style/popular.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <a style="background-color: #e6e9fc" href="page/company/ceo.html"><span>오케이창업주식회사 소개</span></a>
+      <a style="background-color: #d4e5ff" href="page/consult/index.html"><span>창업 컨설팅</span></a>
+      <a style="background-color: #b6ceff" href="page/introduce/index.html"><span>신규창업 소개</span></a>
+    </div>
+
+    <!-- Nav -->
+    <div class="nav">
+      <a><img src="public/images/main/logo.png" /></a>
+      <div class="nav-item">
+        <a>휴게음식점</a>
+        <div class="sub-nav">
+          <a href="#">대형커피</a>
+          <a href="#">테이크아웃커피</a>
+          <a href="#">제과/베이커리</a>
+          <a href="#">아이스크림</a>
+          <a href="#">도너츠</a>
+          <a href="#">페스트푸드</a>
+          <a href="#">피자/스파게티</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>일반음식점</a>
+        <div class="sub-nav">
+          <a href="#">일반식당</a>
+          <a href="#">죽전문점/쌀국수</a>
+          <a href="#">중식/퓨전음식</a>
+          <a href="#">일식/참치/횟집</a>
+          <a href="#">이탈리안 레스토랑</a>
+          <a href="#">분식/떡볶이</a>
+          <a href="#">돈가스/우동</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>배달전문점</a>
+      </div>
+
+      <div class="nav-item">
+        <a>주류/치킨/호프</a>
+        <div class="sub-nav">
+          <a href="#">치킨호프</a>
+          <a href="#">호프(대형맥주전문점)</a>
+          <a href="#">이자카야</a>
+          <a href="#">BAR/와인바</a>
+          <a href="#">퓨전주점/포장마차</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>오락/스포츠</a>
+        <div class="sub-nav">
+          <a href="#">PC방</a>
+          <a href="#">핫요가</a>
+          <a href="#">휘트니스</a>
+          <a href="#">에스테틱/네일아트</a>
+          <a href="#">스크린골프</a>
+          <a href="#">당구장</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>판매/소매/서비스</a>
+        <div class="sub-nav">
+          <a href="#">휴대폰</a>
+          <a href="#">편의점</a>
+          <a href="#">화장품</a>
+          <a href="#">의류/쥬얼리</a>
+          <a href="#">약국</a>
+          <a href="#">요양원</a>
+          <a href="#">산후조리원</a>
+          <a href="#">대형사우나</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>특수상권</a>
+        <div class="sub-nav">
+          <a href="#">유명백화점</a>
+          <a href="#">대형마트</a>
+          <a href="#">영화관</a>
+          <a href="#">병원</a>
+          <a href="#">관공서</a>
+          <a href="#">지하철/역사/터미널</a>
+          <a href="#">다이닝/푸드코트</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>창업정보</a>
+        <div class="sub-nav">
+          <a href="page/info/news.html">창업 뉴스</a>
+          <a href="page/info/analysis.html">상권 분석</a>
+          <a href="page/info/item.html">창업 아이템</a>
+        </div>
+      </div>
+
+      <div class="search">
+        <img src="public/images/main/search.png" />
+        <input placeholder="검색어를 입력하세요." />
+      </div>
+    </div>
+  </body>
+
+  <!-- banner -->
+  <div class="banner">
+    <!-- banner images 넣기 -->
+    <img class="banner-image" src="public/images/main/banner/banner.png" />
+    <img class="banner-image" src="public/images/main/banner/banner22.png" />
+    <!-- banner images 넣기 -->
+  </div>
+
+  <script>
+    const images = document.querySelectorAll(".banner-image");
+    let currentIndex = 0;
+
+    function slideToNextImage() {
+      const previousIndex = currentIndex;
+      currentIndex = (currentIndex + 1) % images.length; // 다음 이미지 인덱스 계산
+
+      // 이전 이미지와 현재 이미지를 슬라이드 효과로 표시
+      images[previousIndex].style.transform = "translateX(100%)"; // 오른쪽으로 이동
+      images[previousIndex].classList.remove("active");
+      images[currentIndex].style.transform = "translateX(0)"; // 중앙으로 이동
+      images[currentIndex].classList.add("active");
+    }
+
+    // 초기 상태 설정
+    images.forEach((img, index) => {
+      if (index === 0) {
+        img.style.transform = "translateX(0)";
+        img.classList.add("active");
+      } else {
+        img.style.transform = "translateX(100%)"; // 오른쪽에 배치
+      }
+    });
+
+    // 3초 간격으로 이미지 슬라이드
+    setInterval(slideToNextImage, 3000);
+  </script>
+
+  <!-- Image Navigation -->
+  <div class="img-nav">
+    <a href="#"><img src="public/images/main/imgNav/image01.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image02.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image03.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image04.png" /></a>
+    <a href="#"><img style="margin-top: 3px; width: 88px" src="public/images/main/imgNav/image11.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image05.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image06.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image07.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image08.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image09.png" /></a>
+    <a href="#"><img src="public/images/main/imgNav/image10.png" /></a>
+  </div>
+
+  <!-- Popular Container -->
+  <div class="popular-container">
+    <!-- Left-container -->
+    <div class="left-container">
+      <p class="title">오케이창업</p>
+      <p class="title2">화제의 아이템</p>
+      <div class="button-container">
+        <button class="button" id="1">
+          <p>01. 소형카페</p>
+          <img src="public/images/main/popular/next.png" />
+        </button>
+        <button class="button" id="2">
+          <p>02. 대형카페</p>
+          <img src="public/images/main/popular/next.png" />
+        </button>
+        <button class="button" id="3">
+          <p>03. 베이커리</p>
+          <img src="public/images/main/popular/next.png" />
+        </button>
+        <button class="button" id="4">
+          <p>04. 패스트푸드</p>
+          <img src="public/images/main/popular/next.png" />
+        </button>
+        <button class="button" id="5">
+          <p>05. 아이스크림</p>
+          <img src="public/images/main/popular/next.png" />
+        </button>
+        <button class="button" id="6">
+          <p>06. 일반음식점</p>
+          <img src="public/images/main/popular/next.png" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Container -->
+    <div class="right-container"></div>
+  </div>
+
+  <script>
+    const popularData = {
+      1: [
+        {
+          title: "투썸플레이스",
+          profit: 1000,
+          revenue: 5000,
+          img: "public/images/main/image.png",
+          link: "https://example.com/product-a",
+        },
+        {
+          title: "Product B",
+          profit: 1500,
+          revenue: 7000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-b",
+        },
+        {
+          title: "Product A",
+          profit: 1000,
+          revenue: 5000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-a",
+        },
+        {
+          title: "Product B",
+          profit: 1500,
+          revenue: 7000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-b",
+        },
+        {
+          title: "Product A",
+          profit: 1000,
+          revenue: 5000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-a",
+        },
+        {
+          title: "Product B",
+          profit: 1500,
+          revenue: 7000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-b",
+        },
+      ],
+      2: [
+        {
+          title: "Product C",
+          profit: 1200,
+          revenue: 6000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-c",
+        },
+        {
+          title: "Product D",
+          profit: 1300,
+          revenue: 6500,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-d",
+        },
+      ],
+
+      3: [
+        {
+          title: "Product C",
+          profit: 1200,
+          revenue: 6000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-c",
+        },
+        {
+          title: "Product D",
+          profit: 1300,
+          revenue: 6500,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-d",
+        },
+      ],
+
+      4: [
+        {
+          title: "Product C",
+          profit: 1200,
+          revenue: 6000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-c",
+        },
+        {
+          title: "Product D",
+          profit: 1300,
+          revenue: 6500,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-d",
+        },
+      ],
+
+      5: [
+        {
+          title: "Product C",
+          profit: 1200,
+          revenue: 6000,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-c",
+        },
+        {
+          title: "Product D",
+          profit: 1300,
+          revenue: 6500,
+          img: "public/images/main/popular/example.png",
+          link: "https://example.com/product-d",
+        },
+      ],
+
+      6: [
+        { title: "Product C", profit: 1200, revenue: 6000, img: "imageC.jpg", link: "https://example.com/product-c" },
+        { title: "Product D", profit: 1300, revenue: 6500, img: "imageD.jpg", link: "https://example.com/product-d" },
+      ],
+    };
+
+    const rightContainer = document.querySelector(".right-container");
+    const buttons = document.querySelectorAll(".button");
+
+    // Default active button 설정
+    const defaultButton = document.getElementById("1");
+    defaultButton.classList.add("active");
+    updateRightContainer("1"); // 초기 렌더링
+
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+        renderImages(index);
+      });
+    });
+
+    document.querySelectorAll(".button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const buttonId = button.id;
+        updateRightContainer(buttonId);
+      });
+    });
+
+    function updateRightContainer(buttonId) {
+      const data = popularData[buttonId];
+
+      rightContainer.innerHTML = "";
+
+      data.forEach((item) => {
+        // 링크 생성
+        const link = document.createElement("a");
+        link.href = item.link;
+        link.target = "_blank";
+        link.className = "card";
+
+        // 이미지 생성
+        const imgDiv = document.createElement("imgDiv");
+        const img = document.createElement("img");
+        img.src = item.img;
+        img.alt = item.title;
+        imgDiv.appendChild(img);
+        imgDiv.className = "img-div";
+
+        // 제목 생성
+        const title = document.createElement("p");
+        title.className = "title";
+        title.textContent = item.title;
+
+        // 수익, 매출 생성 (월수익, 총매출)
+        const details = document.createElement("div");
+
+        const profit = document.createElement("p");
+        profit.className = "profit";
+        profit.innerHTML = `<span>월수익</span> ${item.profit}원`;
+        details.appendChild(profit);
+
+        const revenue = document.createElement("p");
+        revenue.className = "revenue";
+        revenue.innerHTML = `<span>총매출</span> ${item.revenue}원`;
+        details.appendChild(revenue);
+
+        // 링크에 요소 추가
+        link.appendChild(imgDiv);
+        link.appendChild(title);
+        link.appendChild(details);
+
+        // 컨테이너에 추가
+        rightContainer.appendChild(link);
+      });
+    }
+  </script>
+
+  <!-- bottom banner -->
+  <div class="bottom-banner">
+    <img class="bottom-left" src="public/images/main/bottomBanner/left.png" />
+    <img class="bottom-right" src="public/images/main/bottomBanner/right.png" />
+    <div class="slider-wrapper">
+      <p class="bottom-title">창업정보</p>
+      <div class="slider">
+        <!-- bottom banner image 넣기 -->
+        <img class="bottom-banner-img" src="public/images/main/banner/banner.png" />
+        <img class="bottom-banner-img" src="public/images/main/banner/banner.png" />
+        <img class="bottom-banner-img" src="public/images/main/banner/banner.png" />
+        <!-- bottom banner image 넣기 -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.querySelector(".slider");
+    const leftButton = document.querySelector(".bottom-left");
+    const rightButton = document.querySelector(".bottom-right");
+    let currentIndex2 = 0;
+
+    rightButton.addEventListener("click", () => {
+      const totalSlides = slider.children.length;
+      if (currentIndex2 < totalSlides - 1) {
+        currentIndex2++;
+        slider.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+      }
+    });
+
+    leftButton.addEventListener("click", () => {
+      if (currentIndex2 > 0) {
+        currentIndex2--;
+        slider.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+      }
+    });
+  </script>
+
+  <!-- best container -->
+  <div class="best-container">
+    <p><span>오케이창업 </span>베스트 상품</p>
+    <div class="best-item-container"></div>
+    <div class="more">
+      <button class="more-button" onclick="location.href='page/main/list.html'">
+        <div style="display: flex; align-items: center">
+          <p>매물더보기</p>
+          <img src="public/images/main/best/next.png" />
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const bestData = [
+      {
+        img: "public/images/main/image.png",
+        title: "송파구 용우동 가장좋은 소자본 창업",
+        profit1: 550,
+        profit2: 2500,
+        profit3: 1000,
+        link: "",
+      },
+      {
+        img: "public/images/main/best/example.png",
+        title: "송파구 용우동 가장좋은 소자본 창업",
+        profit1: 550,
+        profit2: 2500,
+        profit3: 1000,
+        link: "",
+      },
+      {
+        img: "public/images/main/best/example.png",
+        title: "송파구 용우동 가장좋은 소자본 창업",
+        profit1: 550,
+        profit2: 2500,
+        profit3: 1000,
+        link: "",
+      },
+      {
+        img: "public/images/main/best/example.png",
+        title: "송파구 용우동 가장좋은 소자본 창업",
+        profit1: 550,
+        profit2: 2500,
+        profit3: 1000,
+        link: "",
+      },
+      {
+        img: "public/images/main/best/example.png",
+        title: "송파구 용우동 가장좋은 소자본 창업",
+        profit1: 550,
+        profit2: 2500,
+        profit3: 1000,
+        link: "",
+      },
+      {
+        img: "public/images/main/best/example.png",
+        title: "송파구 용우동 가장좋은 소자본 창업",
+        profit1: 550,
+        profit2: 2500,
+        profit3: 1000,
+        link: "",
+      },
+
+      {
+        img: "public/images/main/best/example.png",
+        title: "송파구 용우동 가장좋은 소자본 창업",
+        profit1: 550,
+        profit2: 2500,
+        profit3: 1000,
+        link: "",
+      },
+      {
+        img: "public/images/main/best/example.png",
+        title: "송파구 용우동 가장좋은 소자본 창업",
+        profit1: 550,
+        profit2: 2500,
+        profit3: 1000,
+        link: "",
+      },
+    ];
+
+    function updateBestData() {
+      const bestItemContainer = document.querySelector(".best-item-container");
+      bestItemContainer.innerHTML = "";
+
+      bestData.forEach((data) => {
+        const bestLink = document.createElement("a");
+        bestLink.href = data.link;
+        bestLink.target = "_blank";
+        bestLink.className = "bestCard";
+
+        // image
+        const imgDiv = document.createElement("div");
+        const bestImg = document.createElement("img");
+        bestImg.src = data.img;
+        imgDiv.className = "img-div";
+        imgDiv.appendChild(bestImg);
+
+        // title
+        const bestTitle = document.createElement("p");
+        bestTitle.className = "title";
+        bestTitle.textContent = data.title;
+
+        // profit container
+        const profitContainer = document.createElement("div");
+
+        const profit1 = document.createElement("p");
+        profit1.textContent = `월순수익 ${Math.floor(data.profit1)}만`;
+        profit1.className = "profit1";
+
+        const profit2 = document.createElement("p");
+        profit2.textContent = `월순수익 ${Math.floor(data.profit2)}만`;
+
+        const profit3 = document.createElement("p");
+        profit3.textContent = `월순수익 ${Math.floor(data.profit3)}만`;
+
+        profitContainer.appendChild(profit1);
+        profitContainer.appendChild(profit2);
+        profitContainer.appendChild(profit3);
+
+        // button
+        const bestButton = document.createElement("button");
+        bestButton.textContent = "자세히 보기";
+        bestButton.className = "best-button";
+
+        bestButton.addEventListener("click", () => {
+          window.location.href = data.link;
+        });
+
+        // add
+        bestLink.appendChild(imgDiv);
+        bestLink.appendChild(bestTitle);
+        bestLink.appendChild(profitContainer);
+        bestLink.appendChild(bestButton);
+
+        bestItemContainer.appendChild(bestLink);
+      });
+    }
+
+    updateBestData();
+  </script>
+
+  <!-- bottom -->
+  <div class="bottom-img">
+    <div class="bottom-slider">
+      <img src="public/images/main/bottom/bottomImg.png" />
+      <img src="public/images/main/bottom/bottomImg2.png" />
+      <img src="public/images/main/bottom/bottomImg.png" />
+      <img src="public/images/main/bottom/bottomImg2.png" />
+    </div>
+  </div>
+
+  <script>
+    const bottomSlider = document.querySelector(".bottom-slider");
+    const bottomImages = document.querySelectorAll(".bottom-slider img");
+    const totalBottomImages = bottomImages.length;
+    let currentBottomIndex = 0;
+
+    function slideBottomImages() {
+      currentBottomIndex = (currentBottomIndex + 1) % totalBottomImages;
+      bottomSlider.style.transform = `translateX(-${currentBottomIndex * 100}%)`;
+    }
+    bottomSlider.style.transform = `translateX(0%)`;
+    setInterval(slideBottomImages, 3000);
+  </script>
+
+  <!-- bottom logo -->
+  <div class="bottom-logo-container">
+    <a href="page/consult/index.html?id=1"><img src="public/images/main/bottomLogo/브랜드별 로고모음-01.jpg" /></a>
+    <a href="page/consult/index.html?id=2"><img src="public/images/main/bottomLogo/브랜드별 로고모음-02.jpg" /></a>
+    <a href="page/consult/index.html?id=3"><img src="public/images/main/bottomLogo/브랜드별 로고모음-03.jpg" /></a>
+    <a href="page/consult/index.html?id=4"><img src="public/images/main/bottomLogo/브랜드별 로고모음-04.jpg" /></a>
+    <a href="page/consult/index.html?id=5"><img src="public/images/main/bottomLogo/브랜드별 로고모음-05.jpg" /></a>
+    <a href="page/consult/index.html?id=6"><img src="public/images/main/bottomLogo/브랜드별 로고모음-06.jpg" /></a>
+    <a href="page/consult/index.html?id=7"><img src="public/images/main/bottomLogo/브랜드별 로고모음-07.jpg" /></a>
+    <a href="page/consult/index.html?id=8"><img src="public/images/main/bottomLogo/브랜드별 로고모음-08.jpg" /></a>
+    <a href="page/consult/index.html?id=9"><img src="public/images/main/bottomLogo/브랜드별 로고모음-09.jpg" /></a>
+    <a href="page/consult/index.html?id=10"><img src="public/images/main/bottomLogo/브랜드별 로고모음-10.jpg" /></a>
+    <a href="page/consult/index.html?id=11"><img src="public/images/main/bottomLogo/브랜드별 로고모음-11.jpg" /></a>
+    <a href="page/consult/index.html?id=12"><img src="public/images/main/bottomLogo/브랜드별 로고모음-12.jpg" /></a>
+    <a href="page/consult/index.html?id=13"><img src="public/images/main/bottomLogo/브랜드별 로고모음-13.jpg" /></a>
+    <a href="page/consult/index.html?id=14"><img src="public/images/main/bottomLogo/브랜드별 로고모음-14.jpg" /></a>
+    <a href="page/consult/index.html?id=15"><img src="public/images/main/bottomLogo/브랜드별 로고모음-15.jpg" /></a>
+    <a href="page/consult/index.html?id=16"><img src="public/images/main/bottomLogo/브랜드별 로고모음-16.jpg" /></a>
+    <a href="page/consult/index.html?id=17"><img src="public/images/main/bottomLogo/브랜드별 로고모음-17.jpg" /></a>
+    <a href="page/consult/index.html?id=18"><img src="public/images/main/bottomLogo/브랜드별 로고모음-18.jpg" /></a>
+    <a href="page/consult/index.html?id=19"><img src="public/images/main/bottomLogo/브랜드별 로고모음-19.jpg" /></a>
+    <a href="page/consult/index.html?id=20"><img src="public/images/main/bottomLogo/브랜드별 로고모음-20.jpg" /></a>
+    <a href="page/consult/index.html?id=21"><img src="public/images/main/bottomLogo/브랜드별 로고모음-21.jpg" /></a>
+    <a href="page/consult/index.html?id=22"><img src="public/images/main/bottomLogo/브랜드별 로고모음-22.jpg" /></a>
+    <a href="page/consult/index.html?id=23"><img src="public/images/main/bottomLogo/브랜드별 로고모음-23.jpg" /></a>
+    <a href="page/consult/index.html?id=24"><img src="public/images/main/bottomLogo/브랜드별 로고모음-24.jpg" /></a>
+    <a href="page/consult/index.html?id=25"><img src="public/images/main/bottomLogo/브랜드별 로고모음-25.jpg" /></a>
+    <a href="page/consult/index.html?id=26"><img src="public/images/main/bottomLogo/브랜드별 로고모음-26.jpg" /></a>
+    <a href="page/consult/index.html?id=27"><img src="public/images/main/bottomLogo/브랜드별 로고모음-27.jpg" /></a>
+    <a href="page/consult/index.html?id=28"><img src="public/images/main/bottomLogo/브랜드별 로고모음-28.jpg" /></a>
+    <a href="page/consult/index.html?id=29"><img src="public/images/main/bottomLogo/브랜드별 로고모음-29.jpg" /></a>
+    <a href="page/consult/index.html?id=30"><img src="public/images/main/bottomLogo/브랜드별 로고모음-30.jpg" /></a>
+    <a href="page/consult/index.html?id=31"><img src="public/images/main/bottomLogo/브랜드별 로고모음-31.jpg" /></a>
+    <a href="page/consult/index.html?id=32"><img src="public/images/main/bottomLogo/브랜드별 로고모음-32.jpg" /></a>
+    <a href="page/consult/index.html?id=33"><img src="public/images/main/bottomLogo/브랜드별 로고모음-33.jpg" /></a>
+    <a href="page/consult/index.html?id=34"><img src="public/images/main/bottomLogo/브랜드별 로고모음-34.jpg" /></a>
+    <a href="page/consult/index.html?id=35"><img src="public/images/main/bottomLogo/브랜드별 로고모음-35.jpg" /></a>
+    <a href="page/consult/index.html?id=36"><img src="public/images/main/bottomLogo/브랜드별 로고모음-36.jpg" /></a>
+    <a href="page/consult/index.html?id=37"><img src="public/images/main/bottomLogo/브랜드별 로고모음-37.jpg" /></a>
+    <a href="page/consult/index.html?id=38"><img src="public/images/main/bottomLogo/브랜드별 로고모음-38.jpg" /></a>
+    <a href="page/consult/index.html?id=39"><img src="public/images/main/bottomLogo/브랜드별 로고모음-39.jpg" /></a>
+    <a href="page/consult/index.html?id=40"><img src="public/images/main/bottomLogo/브랜드별 로고모음-40.jpg" /></a>
+  </div>
+
+  <div>
+    <img src="public/images/main/bottom-img.png" style="width: 100%" />
+  </div>
+</html>

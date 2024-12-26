@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Introduce</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <a style="background-color: #e6e9fc" href="../../index.html"><span>오케이창업주식회사 소개</span></a>
+      <a style="background-color: #d4e5ff" href="../consult/index.html"><span>창업 컨설팅</span></a>
+      <a style="background-color: #b6ceff" href=""><span>신규창업 소개</span></a>
+    </div>
+
+    <!-- Nav -->
+    <div class="nav">
+      <a href="../../index.html"><img src="../../public/images/main/logo.png" /></a>
+      <div class="nav-item">
+        <a>휴게음식점</a>
+        <div class="sub-nav">
+          <a href="#">대형커피</a>
+          <a href="#">테이크아웃커피</a>
+          <a href="#">제과/베이커리</a>
+          <a href="#">아이스크림</a>
+          <a href="#">도너츠</a>
+          <a href="#">페스트푸드</a>
+          <a href="#">피자/스파게티</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>일반음식점</a>
+        <div class="sub-nav">
+          <a href="#">일반식당</a>
+          <a href="#">죽전문점/쌀국수</a>
+          <a href="#">중식/퓨전음식</a>
+          <a href="#">일식/참치/횟집</a>
+          <a href="#">이탈리안 레스토랑</a>
+          <a href="#">분식/떡볶이</a>
+          <a href="#">돈가스/우동</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>배달전문점</a>
+      </div>
+
+      <div class="nav-item">
+        <a>주류/치킨/호프</a>
+        <div class="sub-nav">
+          <a href="#">치킨호프</a>
+          <a href="#">호프(대형맥주전문점)</a>
+          <a href="#">이자카야</a>
+          <a href="#">BAR/와인바</a>
+          <a href="#">퓨전주점/포장마차</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>오락/스포츠</a>
+        <div class="sub-nav">
+          <a href="#">PC방</a>
+          <a href="#">핫요가</a>
+          <a href="#">휘트니스</a>
+          <a href="#">에스테틱/네일아트</a>
+          <a href="#">스크린골프</a>
+          <a href="#">당구장</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>판매/소매/서비스</a>
+        <div class="sub-nav">
+          <a href="#">휴대폰</a>
+          <a href="#">편의점</a>
+          <a href="#">화장품</a>
+          <a href="#">의류/쥬얼리</a>
+          <a href="#">약국</a>
+          <a href="#">요양원</a>
+          <a href="#">산후조리원</a>
+          <a href="#">대형사우나</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>특수상권</a>
+        <div class="sub-nav">
+          <a href="#">유명백화점</a>
+          <a href="#">대형마트</a>
+          <a href="#">영화관</a>
+          <a href="#">병원</a>
+          <a href="#">관공서</a>
+          <a href="#">지하철/역사/터미널</a>
+          <a href="#">다이닝/푸드코트</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>창업정보</a>
+        <div class="sub-nav">
+          <a href="../info/news.html">창업 뉴스</a>
+          <a href="../info/analysis.html">상권 분석</a>
+          <a href="../info/item.html">창업 아이템</a>
+        </div>
+      </div>
+
+      <div class="search">
+        <img src="../../public/images/main/search.png" />
+        <input placeholder="검색어를 입력하세요." />
+      </div>
+    </div>
+    
+    <div style="padding: 0 15%">
+      <div>
+        <img src="images/banner.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 0 15%">
+    <p style="margin: 120px 0 80px; font-size: 38px; font-weight: 600">신규창업소개</p>
+    <div class="item-container">
+      <div class="item-box">
+        <img src="images/example.png"/>
+        <div class="text-container">
+          <p style="font-size: 16px; font-weight: 600; margin: 10px 0">공차</p>
+          <p style="font-size: 14px; color: #505050; margin: 10px 0">감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시</p>
+          <p ><span style="border: 1px solid #E5E5EC; padding: 5px; font-size: 13px">#대형카페</span></p>
+          <div class="btn-container">
+            <button style="background-color: #E5E5EC;">보러가기</button>
+            <button style="background-color: #4B79EE; color: white">상담문의</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div>
+    <img src="../../public/images/main/bottom-img.png"/>
+  </div>
+  <script>
+    const newsContainer = document.querySelector(".item-container");
+    const originalBox = document.querySelector(".item-box");
+    const numberOfBoxes = 14;
+
+    for (let i = 1; i < numberOfBoxes; i++) {
+      const clonedBox = originalBox.cloneNode(true);
+      newsContainer.appendChild(clonedBox);
+    }
+  </script>
+  </body>
+</html>

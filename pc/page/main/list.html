@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="style/list.css" />
+    <title>매물리스트</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <a style="background-color: #e6e9fc" href="../../page/company/ceo.html"><span>오케이창업주식회사 소개</span></a>
+      <a style="background-color: #d4e5ff" href="../../page/consult/index.html"><span>창업 컨설팅</span></a>
+      <a style="background-color: #b6ceff" href="page/introduce/index.html"><span>신규창업 소개</span></a>
+    </div>
+
+    <!-- Nav -->
+    <div class="nav">
+      <a href="../../index.html"><img src="../../public/images/main/logo.png" /></a>
+      <div class="nav-item">
+        <a>휴게음식점</a>
+        <div class="sub-nav">
+          <a href="#">대형커피</a>
+          <a href="#">테이크아웃커피</a>
+          <a href="#">제과/베이커리</a>
+          <a href="#">아이스크림</a>
+          <a href="#">도너츠</a>
+          <a href="#">페스트푸드</a>
+          <a href="#">피자/스파게티</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>일반음식점</a>
+        <div class="sub-nav">
+          <a href="#">일반식당</a>
+          <a href="#">죽전문점/쌀국수</a>
+          <a href="#">중식/퓨전음식</a>
+          <a href="#">일식/참치/횟집</a>
+          <a href="#">이탈리안 레스토랑</a>
+          <a href="#">분식/떡볶이</a>
+          <a href="#">돈가스/우동</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>배달전문점</a>
+      </div>
+
+      <div class="nav-item">
+        <a>주류/치킨/호프</a>
+        <div class="sub-nav">
+          <a href="#">치킨호프</a>
+          <a href="#">호프(대형맥주전문점)</a>
+          <a href="#">이자카야</a>
+          <a href="#">BAR/와인바</a>
+          <a href="#">퓨전주점/포장마차</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>오락/스포츠</a>
+        <div class="sub-nav">
+          <a href="#">PC방</a>
+          <a href="#">핫요가</a>
+          <a href="#">휘트니스</a>
+          <a href="#">에스테틱/네일아트</a>
+          <a href="#">스크린골프</a>
+          <a href="#">당구장</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>판매/소매/서비스</a>
+        <div class="sub-nav">
+          <a href="#">휴대폰</a>
+          <a href="#">편의점</a>
+          <a href="#">화장품</a>
+          <a href="#">의류/쥬얼리</a>
+          <a href="#">약국</a>
+          <a href="#">요양원</a>
+          <a href="#">산후조리원</a>
+          <a href="#">대형사우나</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>특수상권</a>
+        <div class="sub-nav">
+          <a href="#">유명백화점</a>
+          <a href="#">대형마트</a>
+          <a href="#">영화관</a>
+          <a href="#">병원</a>
+          <a href="#">관공서</a>
+          <a href="#">지하철/역사/터미널</a>
+          <a href="#">다이닝/푸드코트</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>창업정보</a>
+        <div class="sub-nav">
+          <a href="../info/news.html">창업 뉴스</a>
+          <a href="../info/analysis.html">상권 분석</a>
+          <a href="../info/item.html">창업 아이템</a>
+        </div>
+      </div>
+
+      <div class="search">
+        <img src="../../public/images/main/search.png" />
+        <input placeholder="검색어를 입력하세요." />
+      </div>
+    </div>
+
+    <div class="header-container">
+      <div class="input-container" style="margin-left: 15%">
+        <div class="input-box">
+          <input placeholder="카테고리" readonly />
+          <img src="../../public/images/main/list/low.png" class="toggle-button" />
+          <ul class="dropdown-list">
+            <li>소형카페</li>
+            <li>대형카페</li>
+            <li>베이커리</li>
+            <li>배달전문점</li>
+            <li>일반음식점</li>
+          </ul>
+        </div>
+        <div class="input-box">
+          <input placeholder="시/도 선택" readonly />
+          <img src="../../public/images/main/list/low.png" class="toggle-button" />
+          <ul class="dropdown-list">
+            <li>강남구</li>
+            <li>광진구</li>
+            <li>서초구</li>
+            <li>송파구</li>
+          </ul>
+        </div>
+        <div class="input-box">
+          <input placeholder="㎡(평)" readonly />
+          <img src="../../public/images/main/list/low.png" class="toggle-button" />
+          <ul class="dropdown-list">
+            <li>16㎡ (5평형)</li>
+            <li>33㎡ (10평형)</li>
+            <li>66㎡ (20평형)</li>
+          </ul>
+        </div>
+        <div class="input-box">
+          <input placeholder="투자금액" readonly />
+          <img src="../../public/images/main/list/low.png" class="toggle-button" />
+          <ul class="dropdown-list">
+            <li>5천만 원-1억</li>
+            <li>1억-2억</li>
+            <li>2억-3억</li>
+          </ul>
+        </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const inputBoxes = document.querySelectorAll(".input-box");
+
+          inputBoxes.forEach((box) => {
+            const toggleButton = box.querySelector(".toggle-button");
+            const dropdownList = box.querySelector(".dropdown-list");
+            const input = box.querySelector("input");
+
+            toggleButton.addEventListener("click", () => {
+              const isHidden = dropdownList.style.display === "none" || !dropdownList.style.display;
+              dropdownList.style.display = isHidden ? "block" : "none";
+            });
+
+            dropdownList.addEventListener("click", (event) => {
+              if (event.target.tagName === "LI") {
+                input.value = event.target.textContent;
+                dropdownList.style.display = "none";
+              }
+            });
+
+            document.addEventListener("click", (event) => {
+              if (!box.contains(event.target)) {
+                dropdownList.style.display = "none";
+              }
+            });
+          });
+        });
+      </script>
+
+      <div class="button-container">
+        <button class="button01">조건 다시 검색</button>
+        <button class="button02">조건 검색 하기</button>
+      </div>
+
+      <div class="result-container">
+        <div class="title" style="margin: 80px 0 60px; font-weight: 600"><span style="color: #4b79ee">오케이창업</span> 상품검색결과</div>
+        <div class="item-container"></div>
+        <div class="link-container">
+          <a><img src="../../public/images/main/list/instagram.png" /></a>
+          <a><img src="../../public/images/main/list/blog.png" /></a>
+          <a><img src="../../public/images/main/list/youtube.png" /></a>
+        </div>
+      </div>
+
+      <div class="page-container">
+        <img src="../../public/images/main/list/left2.png" class="arrow-button left2" />
+        <img src="../../public/images/main/list/left1.png" class="arrow-button left1" />
+        <div class="page-num"></div>
+        <img src="../../public/images/main/list/right1.png" class="arrow-button right1" />
+        <img src="../../public/images/main/list/right2.png" class="arrow-button right2" />
+      </div>
+
+      <div>
+        <img src="../../public/images/main/bottom-img.png" style="width: 100%" />
+      </div>
+    </div>
+
+    <script>
+      const list = [
+        {
+          img: "../../public/images/main/list/img.png",
+          title: "파리바게뜨 송파구 반오토 매장 월매출 1억 월수익1500이상",
+          location: "송파구",
+          category: "제과/베이커리",
+          size: "132㎡ (약 40평형) / 1층",
+          tel: "소경순 컨설턴트 010-4719-232",
+          num: "10000",
+          profit: "1000",
+          sales: "1000",
+          price: "1000",
+          link: "detail.html",
+        },
+        {
+          img: "../../public/images/main/list/img.png",
+          title: "파리바게뜨 송파구 반오토 매장 월매출 1억 월수익1500이상",
+          location: "송파구",
+          category: "제과/베이커리",
+          size: "132㎡ (약 40평형) / 1층",
+          tel: "소경순 컨설턴트 010-4719-232",
+          num: "10000",
+          profit: "1000",
+          sales: "1000",
+          price: "1000",
+          link: "detail.html",
+        },
+        {
+          img: "../../public/images/main/list/img.png",
+          title: "파리바게뜨 송파구 반오토 매장 월매출 1억 월수익1500이상",
+          location: "송파구",
+          category: "제과/베이커리",
+          size: "132㎡ (약 40평형) / 1층",
+          tel: "소경순 컨설턴트 010-4719-232",
+          num: "10000",
+          profit: "1000",
+          sales: "1000",
+          price: "1000",
+          link: "detail.html",
+        },
+        {
+          img: "../../public/images/main/list/img.png",
+          title: "파리바게뜨 송파구 반오토 매장 월매출 1억 월수익1500이상",
+          location: "송파구",
+          category: "제과/베이커리",
+          size: "132㎡ (약 40평형) / 1층",
+          tel: "소경순 컨설턴트 010-4719-232",
+          num: "10000",
+          profit: "1000",
+          sales: "1000",
+          price: "1000",
+          link: "detail.html",
+        },
+        {
+          img: "../../public/images/main/list/img.png",
+          title: "파리바게뜨 송파구 반오토 매장 월매출 1억 월수익1500이상",
+          location: "송파구",
+          category: "제과/베이커리",
+          size: "132㎡ (약 40평형) / 1층",
+          tel: "소경순 컨설턴트 010-4719-232",
+          num: "10000",
+          profit: "1000",
+          sales: "1000",
+          price: "1000",
+          link: "detail.html",
+        },
+      ];
+
+      function updateSearchList() {
+        const itemContainer = document.querySelector(".item-container");
+        itemContainer.innerHTML = "";
+
+        list.forEach((data) => {
+          const link = document.createElement("a");
+          link.href = data.link;
+          link.target = "_blank";
+          link.className = "result-card";
+
+          // image
+          const resultImg = document.createElement("img");
+          resultImg.src = data.img;
+
+          const leftContainer = document.createElement("div");
+          leftContainer.className = "left-container";
+
+          // title
+          const resultTitle = document.createElement("p");
+          resultTitle.className = "result-title";
+          resultTitle.textContent = data.title;
+
+          // 위치, 업종, 크기
+          const infoContainer = document.createElement("div");
+          infoContainer.className = "info-container";
+
+          const location = document.createElement("p");
+          location.textContent = `사업자위치: ${data.location}`;
+
+          const category = document.createElement("p");
+          category.textContent = `사업체 업종: ${data.category}`;
+
+          const size = document.createElement("p");
+          size.textContent = `사업체 크기: ${data.size}`;
+
+          infoContainer.appendChild(location);
+          infoContainer.appendChild(category);
+          infoContainer.appendChild(size);
+
+          // tel
+          const tel = document.createElement("p");
+          tel.className = "result-tel";
+          tel.textContent = data.tel;
+
+          leftContainer.appendChild(resultTitle);
+          leftContainer.appendChild(infoContainer);
+          leftContainer.appendChild(tel);
+
+          const rightContainer = document.createElement("div");
+          rightContainer.className = "right-container";
+
+          // num
+          const num = document.createElement("p");
+          num.className = "result-num";
+          num.textContent = `[매물번호 ${data.num}]`;
+
+          // 이익, 매출, 비용
+          const priceContainer = document.createElement("div");
+          priceContainer.className = "price-container";
+          const profit = document.createElement("p");
+          profit.textContent = `월순이익: ${data.profit}만원`;
+          profit.className = "profit";
+          const sales = document.createElement("p");
+          sales.textContent = `월총매출: ${data.sales}만원`;
+          const price = document.createElement("p");
+          price.textContent = `총창업비용: ${data.price}만원`;
+
+          priceContainer.appendChild(profit);
+          priceContainer.appendChild(sales);
+          priceContainer.appendChild(price);
+
+          // button
+          const button = document.createElement("button");
+          button.textContent = "무료 창업컨설팅 신청";
+          button.className = "button";
+
+          button.addEventListener("click", () => {
+            window.location.href = data.link;
+          });
+
+          rightContainer.appendChild(num);
+          rightContainer.appendChild(priceContainer);
+          rightContainer.appendChild(button);
+
+          // add
+          link.appendChild(resultImg);
+          link.appendChild(leftContainer);
+          link.appendChild(rightContainer);
+
+          itemContainer.appendChild(link);
+        });
+      }
+
+      updateSearchList();
+    </script>
+
+    <script>
+      const totalPages = 20; // 총 페이지 수
+      const visiblePages = 10; // 한 번에 표시할 페이지 수
+      let currentPage = 1; // 현재 페이지
+      const pageNumContainer = document.querySelector(".page-num"); // 페이지 번호 컨테이너
+
+      // 페이징 UI 업데이트
+      function updatePagination() {
+        pageNumContainer.innerHTML = ""; // 초기화
+
+        const startPage = Math.floor((currentPage - 1) / visiblePages) * visiblePages + 1;
+        const endPage = Math.min(startPage + visiblePages - 1, totalPages);
+
+        // 페이지 번호 버튼 생성
+        for (let i = startPage; i <= endPage; i++) {
+          const pageButton = document.createElement("button");
+          pageButton.textContent = i;
+          pageButton.className = `page-button ${i === currentPage ? "active" : ""}`;
+          pageButton.onclick = () => changePage(i);
+          pageNumContainer.appendChild(pageButton);
+        }
+      }
+
+      // 페이지 변경
+      function changePage(newPage) {
+        currentPage = newPage;
+        updatePagination();
+        updateArrowVisibility();
+      }
+
+      // 화살표 비활성화 처리
+      function updateArrowVisibility() {
+        const left1 = document.querySelector(".left1");
+        const left2 = document.querySelector(".left2");
+        const right1 = document.querySelector(".right1");
+        const right2 = document.querySelector(".right2");
+
+        // 왼쪽 화살표 비활성화 처리
+        const isFirstPage = currentPage === 1;
+        left1.style.opacity = isFirstPage ? "0.5" : "1";
+        left1.style.pointerEvents = isFirstPage ? "none" : "auto";
+
+        left2.style.opacity = isFirstPage ? "0.5" : "1";
+        left2.style.pointerEvents = isFirstPage ? "none" : "auto";
+
+        // 오른쪽 화살표 비활성화 처리
+        const isLastPage = currentPage === totalPages;
+        right1.style.opacity = isLastPage ? "0.5" : "1";
+        right1.style.pointerEvents = isLastPage ? "none" : "auto";
+
+        right2.style.opacity = isLastPage ? "0.5" : "1";
+        right2.style.pointerEvents = isLastPage ? "none" : "auto";
+      }
+
+      // 화살표 버튼 클릭 이벤트
+      document.querySelector(".left1").onclick = () => {
+        if (currentPage > 1) changePage(currentPage - 1);
+      };
+
+      document.querySelector(".left2").onclick = () => {
+        if (currentPage > visiblePages) changePage(currentPage - visiblePages);
+      };
+
+      document.querySelector(".right1").onclick = () => {
+        if (currentPage < totalPages) changePage(currentPage + 1);
+      };
+
+      document.querySelector(".right2").onclick = () => {
+        if (currentPage + visiblePages <= totalPages) changePage(currentPage + visiblePages);
+      };
+
+      // 초기 렌더링
+      updatePagination();
+      updateArrowVisibility();
+    </script>
+  </body>
+</html>

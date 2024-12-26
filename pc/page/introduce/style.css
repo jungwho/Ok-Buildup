@@ -1,0 +1,31 @@
+.item-container {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 35px 2.5%;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 227px;
+  padding: 10px;
+}
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0;
+  button {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}

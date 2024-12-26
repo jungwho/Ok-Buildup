@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main-top</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <a style="background-color: #e6e9fc"><p>오케이창업주식회사 소개</p></a>
+      <a style="background-color: #d4e5ff"><p>창업 컨설팅</p></a>
+      <a style="background-color: #b6ceff"><p>신규창업 소개</p></a>
+    </div>
+
+    <!-- Nav -->
+    <div class="nav">
+      <a href="#"><img src="../../public/image/main-top/logo.png" /></a>
+      <div class="nav-item">
+        <a>휴게음식점</a>
+        <div class="sub-nav">
+          <a href="#">대형커피</a>
+          <a href="#">테이크아웃커피</a>
+          <a href="#">제과/베이커리</a>
+          <a href="#">아이스크림</a>
+          <a href="#">도너츠</a>
+          <a href="#">페스트푸드</a>
+          <a href="#">피자/스파게티</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>일반음식점</a>
+        <div class="sub-nav">
+          <a href="#">일반식당</a>
+          <a href="#">죽전문점/쌀국수</a>
+          <a href="#">중식/퓨전음식</a>
+          <a href="#">일식/참치/횟집</a>
+          <a href="#">이탈리안 레스토랑</a>
+          <a href="#">분식/떡볶이</a>
+          <a href="#">돈가스/우동</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>주류/치킨/호프</a>
+        <div class="sub-nav">
+          <a href="#">치킨호프</a>
+          <a href="#">호프(대형맥주전문점)</a>
+          <a href="#">이자카야</a>
+          <a href="#">BAR/와인바</a>
+          <a href="#">퓨전주점/포장마차</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>오락/스포츠</a>
+        <div class="sub-nav">
+          <a href="#">PC방</a>
+          <a href="#">핫요가</a>
+          <a href="#">휘트니스</a>
+          <a href="#">에스테틱/네일아트</a>
+          <a href="#">스크린골프</a>
+          <a href="#">당구장</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>판매/소매/서비스</a>
+        <div class="sub-nav">
+          <a href="#">휴대폰</a>
+          <a href="#">편의점</a>
+          <a href="#">화장품</a>
+          <a href="#">의류/쥬얼리</a>
+          <a href="#">약국</a>
+          <a href="#">요양원</a>
+          <a href="#">산후조리원</a>
+          <a href="#">대형사우나</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>특수상권</a>
+        <div class="sub-nav">
+          <a href="#">유명백화점</a>
+          <a href="#">대형마트</a>
+          <a href="#">영화관</a>
+          <a href="#">병원</a>
+          <a href="#">관공서</a>
+          <a href="#">지하철/역사/터미널</a>
+          <a href="#">다이닝/푸드코트</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>창업정보</a>
+        <div class="sub-nav">
+          <a href="#">창업 뉴스</a>
+          <a href="#">상권 분석</a>
+          <a href="#">창업 아이템</a>
+        </div>
+      </div>
+
+      <div class="search">
+        <img src="../../public/image/main-top/search.png" />
+        <input placeholder="검색어를 입력하세요." />
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+      <img class="banner-image" src="../../public/image/main-top/banner.png" />
+      <img class="banner-image" src="../../public/image/main-top/banner2.png" />
+      <img class="left-arrow" src="../../public/image/main-top/left.png" />
+      <img class="right-arrow" src="../../public/image/main-top/right.png" />
+    </div>
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "pretendard";
+    src: url("../../public/font/Pretendard-Regular.otf") format("opentype");
+  }
+
+  * {
+    font-family: "pretendard";
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    height: 46px;
+    a {
+      display: flex;
+      width: 33.3%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .nav {
+    display: flex;
+    height: 70px;
+    padding: 0 12%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-item {
+    position: relative;
+    a {
+      padding: 10px 20px;
+      font-size: 15px;
+      color: #333;
+    }
+  }
+
+  .sub-nav {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 150%;
+    left: 15%;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .sub-nav a {
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .sub-nav a:hover {
+    background-color: #f0f0f0;
+    color: #4b79ee;
+    opacity: 1;
+  }
+
+  .nav-item:hover .sub-nav {
+    display: flex;
+  }
+
+  .search {
+    position: relative;
+    width: 190px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    input {
+      width: 100%;
+      height: 100%;
+      padding-left: 35px;
+      border: 1px solid #e5e5ec;
+      border-radius: 30px;
+    }
+    img {
+      padding-left: 10px;
+      position: absolute;
+    }
+  }
+
+  .banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner-image {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+    height: auto;
+    z-index: 10;
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+
+  .banner .banner-image.active {
+    display: block;
+  }
+</style>
+
+<script>
+  const images = document.querySelectorAll(".banner-image");
+  const leftArrow = document.querySelector(".left-arrow");
+  const rightArrow = document.querySelector(".right-arrow");
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    images.forEach((image) => image.classList.remove("active"));
+    images[index].classList.add("active");
+  }
+
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  function showPreviousImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  showImage(currentIndex);
+
+  leftArrow.addEventListener("click", showPreviousImage);
+  rightArrow.addEventListener("click", showNextImage);
+</script>

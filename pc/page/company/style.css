@@ -1,0 +1,128 @@
+.company-nav {
+  padding: 0 15%;
+
+  .info-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 33%;
+      height: 60px;
+      border-bottom: 1px solid #f1f1f5;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 120px;
+  }
+}
+
+.ceo-description-container {
+  width: 50%;
+  p {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  div {
+    color: #616161;
+    line-height: 1.5;
+  }
+}
+
+.consultant-container {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.consultant-box {
+  width: 30%;
+}
+
+.map-container {
+  .map-title {
+    margin: 100px 0 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.map-box {
+  margin-right: 50px;
+  p {
+    color: #767676;
+    margin: 20px 0;
+    font-size: 16px;
+  }
+}
+
+.map-box2 {
+  p {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+}
+
+.recommend-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 구조 설정 */
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.img-box {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.top-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.recommend-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.recommend-profit {
+  color: #767676;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.recommend-price {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 24px;
+  p {
+    color: #4b79ee;
+  }
+  span {
+    color: #4b79ee;
+    font-size: 32px;
+    font-weight: 600;
+  }
+}

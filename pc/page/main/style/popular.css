@@ -1,0 +1,337 @@
+.popular-container {
+  display: flex;
+  padding: 0 15%;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.left-container {
+  flex-direction: column;
+  margin-right: 10px;
+  .title {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .title2 {
+    color: #4b79ee;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px 15px;
+    width: 250px;
+    height: 50px;
+    margin-right: 15px;
+    margin-bottom: 17px;
+    font-size: 20px;
+  }
+
+  .button:hover {
+    opacity: 0.5;
+    transition: 0.5;
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+  }
+  .button.active {
+    color: white;
+    background-color: #4b79ee;
+
+    p {
+      color: white;
+    }
+  }
+}
+
+.right-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  gap: 2%;
+  justify-content: flex-start;
+  margin-left: 5px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+
+  a {
+    width: 32%;
+    height: 18vw;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+
+  a > img {
+    width: 100%;
+  }
+}
+
+.card .img-div {
+  width: 100%;
+
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+  }
+}
+
+.card .title {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.card div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.card .profit {
+  font-size: 13px;
+}
+
+.card .profit span {
+  margin-right: 5px;
+  background-color: rgb(246, 246, 246);
+  padding: 4px;
+}
+
+.card .revenue {
+  font-size: 13px;
+  color: #4b79ee;
+}
+
+.card .revenue span {
+  margin-right: 5px;
+  background-color: rgb(246, 246, 246);
+  padding: 4px;
+  color: #4b79ee;
+}
+
+.bottom-banner {
+  position: relative;
+  height: 710px;
+  background-color: #f1f1f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 슬라이더 영역 밖 이미지 숨김 */
+}
+
+.bottom-title {
+  color: #4b79ee;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.bottom-left {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+}
+
+.bottom-left:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.bottom-right {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+}
+
+.bottom-right:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.slider-wrapper {
+  width: 70%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.bottom-banner-img {
+  width: 100%;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.best-container {
+  padding: 0 15%;
+  margin-top: 80px;
+  p {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
+  p > span {
+    color: #4b79ee;
+  }
+}
+
+.best-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5%;
+  justify-content: flex-start;
+  margin-left: 5px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+
+  a {
+    width: 31.5%;
+    height: 480px;
+    border-radius: 20px;
+    border: 1px solid #e5e5ec;
+    margin-bottom: 40px;
+  }
+
+  a > img {
+    width: 100%;
+  }
+}
+
+.bestCard {
+  position: relative;
+
+  .title {
+    font-size: 20px;
+    margin: 15px;
+  }
+
+  div > p {
+    font-size: 15px;
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  div > .profit1 {
+    color: #4b79ee;
+  }
+
+  button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background-color: white;
+    font-size: 14px;
+    border: 1px solid #e5e5ec;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    color: #4b79ee;
+  }
+
+  .img-div {
+    width: 100%;
+    height: 60%;
+    img {
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      overflow: hidden;
+    }
+  }
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.more-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e5e5ec;
+  width: 363px;
+  height: 56px;
+  background-color: white;
+  p {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.more-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.bottom-img {
+  width: 70%;
+  margin: 40px 15% 80px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bottom-slider {
+  display: flex;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.bottom-slider img {
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.bottom-logo-container {
+  padding: 0 20%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 15px;
+  margin: 120px 0;
+}
+
+.bottom-logo-container a {
+  display: block;
+}
+
+.bottom-logo-container img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

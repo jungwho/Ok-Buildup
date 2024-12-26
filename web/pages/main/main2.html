@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main2</title>
+  </head>
+  <body>
+    <div class="banner-container">
+      <p>창업정보</p>
+      <div class="banner-image-container">
+        <button class="img-container" id="left-btn">
+          <img src="../../public/image/main2/left.png" />
+        </button>
+        <img id="banner-img" src="../../public/image/main2/banner.png" />
+        <button class="img-container" id="right-btn">
+          <img src="../../public/image/main2/right.png" />
+        </button>
+      </div>
+    </div>
+
+    <div class="best-container">
+      <p><span style="color: #4b79ee">오케이창업</span> 베스트 상품</p>
+      <div id="best-img-container" class="best-img-container"></div>
+      <button id="load-more-btn" class="load-more-btn">매물 더보기</button>
+    </div>
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "pretendard";
+    src: url("../../public/font/Pretendard-Regular.otf") format("opentype");
+  }
+
+  * {
+    font-family: "pretendard";
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .banner-container {
+    background-color: #f1f1f5;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      img {
+        width: 60%;
+        margin: 0 15px;
+      }
+    }
+
+    p {
+      color: #4b79ee;
+      font-size: 40px;
+      margin-left: 18%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .img-container {
+    background-color: rgb(79, 79, 79);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .best-container {
+    padding: 30px 18%;
+
+    p {
+      font-size: 40px;
+    }
+
+    img {
+      width: 30%;
+    }
+  }
+
+  .best-img-container {
+    width: 100%;
+    padding: 30px 4%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+
+  .best-img-container img {
+    border: 1px solid #ddd;
+  }
+
+  .load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 100px;
+    border: 1px solid rgb(186, 186, 186);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+  }
+
+  .load-more-btn:hover {
+    opacity: 0.5;
+  }
+</style>
+
+<script>
+  const images = [
+    "../../public/image/main2/banner.png",
+    "../../public/image/main2/banner2.png",
+    "../../public/image/main2/banner3.png",
+  ];
+
+  let currentIndex = 0;
+
+  const bannerImg = document.getElementById("banner-img");
+  const leftButton = document.getElementById("left-btn");
+  const rightButton = document.getElementById("right-btn");
+
+  leftButton.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    bannerImg.src = images[currentIndex];
+  });
+
+  rightButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    bannerImg.src = images[currentIndex];
+  });
+
+  const bestImages = [
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+    "../../public/image/main2/best.png",
+  ];
+
+  const bestImgContainer = document.getElementById("best-img-container");
+  const loadMoreBtn = document.getElementById("load-more-btn");
+
+  let itemsToShow = 12;
+  const itemsPerLoad = 6;
+
+  function renderImages() {
+    bestImgContainer.innerHTML = "";
+    const imagesToRender = bestImages.slice(0, itemsToShow);
+    imagesToRender.forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "best product";
+      bestImgContainer.appendChild(img);
+    });
+
+    if (itemsToShow >= bestImages.length) {
+      loadMoreBtn.style.display = "none";
+    } else {
+      loadMoreBtn.style.display = "block";
+    }
+  }
+
+  loadMoreBtn.addEventListener("click", () => {
+    itemsToShow += itemsPerLoad;
+    renderImages();
+  });
+
+  renderImages();
+</script>

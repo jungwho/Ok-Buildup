@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="info.css" />
+    <title>analysis</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <a style="background-color: #e6e9fc" href="../../page/company/ceo.html"><span>오케이창업주식회사 소개</span></a>
+      <a style="background-color: #d4e5ff" href="../../page/consult/index.html"><span>창업 컨설팅</span></a>
+      <a style="background-color: #b6ceff" href="../../page/introduce/index.html"><span>신규창업 소개</span></a>
+    </div>
+
+    <!-- Nav -->
+    <div class="nav">
+      <a><img src="../../public/images/main/logo.png" /></a>
+      <div class="nav-item">
+        <a>휴게음식점</a>
+        <div class="sub-nav">
+          <a href="#">대형커피</a>
+          <a href="#">테이크아웃커피</a>
+          <a href="#">제과/베이커리</a>
+          <a href="#">아이스크림</a>
+          <a href="#">도너츠</a>
+          <a href="#">페스트푸드</a>
+          <a href="#">피자/스파게티</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>일반음식점</a>
+        <div class="sub-nav">
+          <a href="#">일반식당</a>
+          <a href="#">죽전문점/쌀국수</a>
+          <a href="#">중식/퓨전음식</a>
+          <a href="#">일식/참치/횟집</a>
+          <a href="#">이탈리안 레스토랑</a>
+          <a href="#">분식/떡볶이</a>
+          <a href="#">돈가스/우동</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>배달전문점</a>
+      </div>
+
+      <div class="nav-item">
+        <a>주류/치킨/호프</a>
+        <div class="sub-nav">
+          <a href="#">치킨호프</a>
+          <a href="#">호프(대형맥주전문점)</a>
+          <a href="#">이자카야</a>
+          <a href="#">BAR/와인바</a>
+          <a href="#">퓨전주점/포장마차</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>오락/스포츠</a>
+        <div class="sub-nav">
+          <a href="#">PC방</a>
+          <a href="#">핫요가</a>
+          <a href="#">휘트니스</a>
+          <a href="#">에스테틱/네일아트</a>
+          <a href="#">스크린골프</a>
+          <a href="#">당구장</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>판매/소매/서비스</a>
+        <div class="sub-nav">
+          <a href="#">휴대폰</a>
+          <a href="#">편의점</a>
+          <a href="#">화장품</a>
+          <a href="#">의류/쥬얼리</a>
+          <a href="#">약국</a>
+          <a href="#">요양원</a>
+          <a href="#">산후조리원</a>
+          <a href="#">대형사우나</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>특수상권</a>
+        <div class="sub-nav">
+          <a href="#">유명백화점</a>
+          <a href="#">대형마트</a>
+          <a href="#">영화관</a>
+          <a href="#">병원</a>
+          <a href="#">관공서</a>
+          <a href="#">지하철/역사/터미널</a>
+          <a href="#">다이닝/푸드코트</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a>창업정보</a>
+        <div class="sub-nav">
+          <a href="news.html">창업 뉴스</a>
+          <a href="#">상권 분석</a>
+          <a href="item.html">창업 아이템</a>
+        </div>
+      </div>
+
+      <div class="search">
+        <img src="../../public/images/main/search.png" />
+        <input placeholder="검색어를 입력하세요." />
+      </div>
+    </div>
+
+    <div class="info-nav">
+      <img src="images/banner.png" style="width: 100%" />
+      <div class="info-box">
+        <a href="news.html">창업뉴스</a>
+        <a style="border-bottom: 1px solid gray">상권분석</a>
+        <a href="item.html">창업아이템</a>
+      </div>
+    </div>
+
+    <div class="news-container">
+      <a class="news-box">
+        <img src="images/news-img.png" />
+        <div>
+          <p class="title">성공적인 매장 양도양수를 위한 5···필수 팁</p>
+          <p class="description">
+            매장을 양도하거나 양수하려는 과정은 쉽지 않은 일입니다. 여러 가지 요소를 신중하게 고려해야 성공적으로 거래를 마무리할 수
+            있습니다. 오늘은 매장 양도양수를 계획하고 있는 여러분을 위해 반드시 알아두어야 할 5가지 필수 팁을 소개해드리겠습니다.
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <script>
+      const newsContainer = document.querySelector(".news-container");
+      const originalBox = document.querySelector(".news-box");
+      const numberOfBoxes = 13;
+
+      for (let i = 1; i < numberOfBoxes; i++) {
+        const clonedBox = originalBox.cloneNode(true);
+        newsContainer.appendChild(clonedBox);
+      }
+    </script>
+
+    <div style="margin-top: 200px">
+      <img src="../../public/images/main/bottom-img.png" style="width: 100%" />
+    </div>
+  </body>
+</html>

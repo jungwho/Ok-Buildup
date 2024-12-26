@@ -1,0 +1,16 @@
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-image {
+  display: none;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.banner .banner-image.active {
+  display: block;
+}
