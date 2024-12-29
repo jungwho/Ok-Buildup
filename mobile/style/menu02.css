@@ -1,0 +1,70 @@
+.container {
+  padding: 0 5%;
+  margin-bottom: 40px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: calc(17px + 0.7vw);
+}
+
+input {
+  padding: 10px;
+  font-size: calc(11px + 0.7vw);
+  border: 1px solid #cacad7;
+  border-radius: 3px;
+  color: #cacad7;
+}
+
+.price-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group input {
+  margin-right: 5px;
+}
+
+.radio-group label {
+  font-size: calc(11px + 0.7vw);
+}
+
+.category-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.category-group input {
+  margin-right: 3px;
+}
+
+.category-group label {
+  font-size: calc(10px + 0.7vw);
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+textarea {
+  padding: 10px;
+  font-size: calc(11px + 0.7vw);
+  border: 1px solid #cacad7;
+  border-radius: 3px;
+  color: #cacad7;
+  width: 100%;
+  height: calc(4 * (1.2em + 10px)); /* 4줄 정도의 높이 */
+  resize: vertical; /* 사용자가 크기 조정 가능 */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  transform: scale(0.7); /* 크기 줄이기 */
+}

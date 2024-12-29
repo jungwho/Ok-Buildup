@@ -1,0 +1,8 @@
+.profit-box {
+  width: 31%;
+  background-color: #f1f1f5;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}

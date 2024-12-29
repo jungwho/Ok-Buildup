@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <title>OK-MOBILE</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <a href="index.html"><img src="images/main/logo.png" /></a>
+      <div>
+        <input placeholder="검색어를 입력하시오." />
+        <img src="images/main/search.png" />
+      </div>
+    </div>
+
+    <!-- navigation -->
+    <div class="nav">
+      <a style="color: #4b79ee; font-weight: 500; border-bottom: 2px solid #4b79ee">MAIN</a>
+      <a href="menu01.html">매물정보</a>
+      <a href="menu02.html">창업 컨설팅</a>
+      <a href="menu03.html">창업정보</a>
+      <a href="menu04.html">신규창업소개</a>
+      <a href="menu05.html">회사소개</a>
+    </div>
+
+    <!-- banner -->
+    <div class="slider-container">
+      <div class="slider">
+        <img src="images/main/banner/m_b1.png" />
+        <img src="images/main/banner/m_b2.png" />
+        <img src="images/main/banner/m_b3.png" />
+        <img src="images/main/banner/m_b4.png" />
+        <img src="images/main/banner/m_b5.png" />
+        <img src="images/main/banner/m_b6.png" />
+        <img src="images/main/banner/m_b7.png" />
+        <img src="images/main/banner/m_b8.png" />
+        <img src="images/main/banner/m_b9.png" />
+        <img src="images/main/banner/m_b1.png" />
+      </div>
+    </div>
+
+    <!-- banner script -->
+    <script>
+      const slider = document.querySelector(".slider");
+      const images = document.querySelectorAll(".slider img");
+      const totalImages = images.length;
+      let currentIndex = 0;
+
+      function slideImages() {
+        currentIndex++;
+
+        if (currentIndex === totalImages) {
+          slider.style.transition = "none";
+          slider.style.transform = "translateX(0)";
+          currentIndex = 0;
+
+          setTimeout(() => {
+            slider.style.transition = "transform 0.5s ease";
+            currentIndex++;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+          }, 50);
+        } else {
+          slider.style.transition = "transform 0.5s ease";
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+      }
+
+      setInterval(slideImages, 3000);
+    </script>
+
+    <!-- category -->
+    <div style="padding: 0 5%; margin-top: 65px">
+      <p style="font-size: calc(1vw + 17px); font-weight: 600; margin-bottom: 30px">
+        <span style="color: #4b79ee">오케이주식회사</span> 양도양수매물
+      </p>
+
+      <div class="category-container">
+        <a><img src="images/main/category/c_01.png" /></a>
+        <a><img src="images/main/category/c_02.png" /></a>
+        <a><img src="images/main/category/c_03.png" /></a>
+        <a><img src="images/main/category/c_04.png" /></a>
+        <a><img src="images/main/category/c_05.png" /></a>
+      </div>
+
+      <div class="category-container">
+        <a><img src="images/main/category/c_06.png" /></a>
+        <a><img src="images/main/category/c_07.png" /></a>
+        <a><img src="images/main/category/c_08.png" /></a>
+        <a><img src="images/main/category/c_09.png" /></a>
+        <a><img src="images/main/category/c_10.png" /></a>
+      </div>
+    </div>
+
+    <!-- 화제의 아이템 -->
+    <div style="padding: 0 5%; margin-top: 65px">
+      <p style="font-size: calc(1vw + 17px); font-weight: 600; margin-bottom: 15px">화제의 아이템</p>
+      <div class="scroll-container">
+        <a href="#" data-category="1" style="border-bottom: 3px solid #4b79ee; color: #4b79ee; font-weight: 600">01. 소형카페</a>
+        <a href="#" data-category="2">02. 대형카페</a>
+        <a href="#" data-category="3">03. 베이커리</a>
+        <a href="#" data-category="4">04. 패스트푸드</a>
+        <a href="#" data-category="5">05. 아이스크림</a>
+        <a href="#" data-category="6">06. 일반음식점</a>
+      </div>
+
+      <div class="popular-container"></div>
+
+      <script>
+        const bestData = {
+          1: [
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+          ],
+          2: [
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+          ],
+          3: [
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+          ],
+          4: [
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+          ],
+          5: [
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+          ],
+          6: [
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+            { img: "images/main/example.png", title: "투썸플레이스 창업 강서지역", profit: 34000, sales: 34000, price: 34000 },
+          ],
+        };
+
+        const scrollContainer = document.querySelector(".scroll-container");
+        const popularContainer = document.querySelector(".popular-container");
+
+        const renderData = (category) => {
+          popularContainer.innerHTML = "";
+          const categoryData = bestData[category];
+          categoryData.forEach((item) => {
+            const itemElement = document.createElement("a");
+            itemElement.className = "best-item";
+            itemElement.innerHTML = `
+              <div class="img-div"><img src="${item.img}"></div>
+              <div class="text-div">
+                <p class="title">${item.title}</p>
+                <p style="color: #4b79ee"><span>월순수익</span> ${item.profit}만원</p>
+                <p><span>월총매출</span> ${item.sales}만원</p>
+                <p><span>월순수익</span> ${item.price}만원</p>
+              </div>
+            `;
+            popularContainer.appendChild(itemElement);
+          });
+        };
+
+        const updateActiveStyle = (activeElement) => {
+          const links = scrollContainer.querySelectorAll("a");
+          links.forEach((link) => {
+            link.style.borderBottom = "none";
+            link.style.color = "";
+            link.style.fontWeight = "";
+          });
+          activeElement.style.borderBottom = "3px solid #4b79ee";
+          activeElement.style.color = "#4b79ee";
+          activeElement.style.fontWeight = "600";
+        };
+
+        window.onload = () => {
+          const defaultCategory = "1";
+          renderData(defaultCategory);
+          const defaultLink = scrollContainer.querySelector(`[data-category="${defaultCategory}"]`);
+          updateActiveStyle(defaultLink);
+        };
+
+        scrollContainer.addEventListener("click", (event) => {
+          event.preventDefault();
+          const category = event.target.getAttribute("data-category");
+          if (category) {
+            renderData(category);
+            updateActiveStyle(event.target);
+          }
+        });
+      </script>
+    </div>
+
+    <!-- 신규창업아이템 -->
+    <div style="padding: 0 5%; margin-top: 65px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px">
+      <p style="font-size: calc(1vw + 17px); font-weight: 600">신규창업아이템</p>
+      <a href="menu04.html"><img src="images/main/plus.png" style="width: 5vw; height: 5vw" /></a>
+    </div>
+
+    <div class="new-slider-container">
+      <div class="new-slider">
+        <img src="images/main/example.png" />
+        <img src="images/main/example2.png" />
+        <img src="images/main/example.png" />
+        <img src="images/main/example2.png" />
+      </div>
+
+      <button id="prevBtn" style="left: 10px"><img src="images/main/left.png" /></button>
+      <button id="nextBtn" style="right: 10px"><img src="images/main/right.png" /></button>
+    </div>
+
+    <script>
+      const slider2 = document.querySelector(".new-slider");
+      const images2 = document.querySelectorAll(".new-slider img");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let currentIndex2 = 0;
+
+      function moveSlider() {
+        const offset = -currentIndex2 * 100; // 한 이미지 너비에 해당하는 이동
+        slider2.style.transform = `translateX(${offset}vw)`;
+      }
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex2 = currentIndex2 === 0 ? images2.length - 1 : currentIndex2 - 1;
+        moveSlider();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex2 = currentIndex2 === images2.length - 1 ? 0 : currentIndex2 + 1;
+        moveSlider();
+      });
+    </script>
+
+    <!-- 창업 정보 -->
+    <div style="padding: 0 5%; margin-top: 65px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px">
+      <p style="font-size: calc(1vw + 17px); font-weight: 600">창업정보</p>
+      <a href="menu03.html"><img src="images/main/plus.png" style="width: 5vw; height: 5vw" /></a>
+    </div>
+
+    <div style="width: 100vw; background-color: #f1f1f5; position: relative">
+      <div class="news-container" style="overflow: hidden">
+        <div class="news-slider"></div>
+      </div>
+
+      <button id="leftBtn" style="left: 0px; position: absolute; width: 30px; height: 50px; top: 50%; transform: translateY(-50%)">
+        <img src="images/main/left1.png" style="width: 100%; height: 100%" />
+      </button>
+      <button id="rightBtn" style="right: 0px; position: absolute; width: 30px; height: 50px; top: 50%; transform: translateY(-50%)">
+        <img src="images/main/right2.png" style="width: 100%; height: 100%" />
+      </button>
+    </div>
+
+    <script>
+      const newsData = [
+        {
+          title: "01 성공적인 매장 양도매수를 위한 5가지 팁",
+          description:
+            "매장을 양도하거나 양수하려는 과정은 쉽지 않은 일입니다. 여러 가지 요소를 신중하게 고려해야 성공적으로 거래를 마무리할 수 있습니다. 오늘은 매장 양도양수를 계획하고 있는 여러분을 위해 반드시 알아두어야 할 5가지 필수 팁을 소개해드리겠습니다.",
+          link: "",
+          date: "0000.00.00",
+        },
+        {
+          title: "02 성공적인 매장 양도매수를 위한 5가지 팁",
+          description:
+            "매장을 양도하거나 양수하려는 과정은 쉽지 않은 일입니다. 여러 가지 요소를 신중하게 고려해야 성공적으로 거래를 마무리할 수 있습니다. 오늘은 매장 양도양수를 계획하고 있는 여러분을 위해 반드시 알아두어야 할 5가지 필수 팁을 소개해드리겠습니다.",
+          link: "",
+          date: "0000.00.00",
+        },
+        {
+          title: "03 성공적인 매장 양도매수를 위한 5가지 팁",
+          description:
+            "매장을 양도하거나 양수하려는 과정은 쉽지 않은 일입니다. 여러 가지 요소를 신중하게 고려해야 성공적으로 거래를 마무리할 수 있습니다. 오늘은 매장 양도양수를 계획하고 있는 여러분을 위해 반드시 알아두어야 할 5가지 필수 팁을 소개해드리겠습니다.",
+          link: "",
+          date: "0000.00.00",
+        },
+      ];
+
+      const newsContainer = document.querySelector(".news-slider");
+
+      newsData.forEach((item) => {
+        const newsCard = document.createElement("a");
+        newsCard.className = "news-card";
+        newsCard.href = item.link;
+        newsCard.target = "_blank";
+
+        const newsTitle = document.createElement("p");
+        newsTitle.className = "news-title";
+        newsTitle.textContent = item.title;
+
+        const description = document.createElement("div");
+        description.className = "description";
+        description.textContent = item.description;
+
+        const date = document.createElement("p");
+        date.className = "date";
+        date.textContent = item.date;
+
+        newsCard.appendChild(newsTitle);
+        newsCard.appendChild(description);
+        newsCard.appendChild(date);
+
+        newsContainer.appendChild(newsCard);
+      });
+
+      let currentSlide = 0;
+
+      const leftBtn = document.getElementById("leftBtn");
+      const rightBtn = document.getElementById("rightBtn");
+      const totalSlides = newsData.length;
+
+      const updateSliderPosition = () => {
+        const sliderWidth = document.querySelector(".news-container").offsetWidth;
+        newsContainer.style.transform = `translateX(${-currentSlide * sliderWidth}px)`;
+      };
+
+      leftBtn.addEventListener("click", () => {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateSliderPosition();
+        }
+      });
+
+      rightBtn.addEventListener("click", () => {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+          updateSliderPosition();
+        }
+      });
+
+      // 초기 슬라이드 위치 설정
+      updateSliderPosition();
+    </script>
+
+    <!-- 오케이창업 베스트매물 -->
+    <div style="padding: 0 5%; margin-top: 65px">
+      <p style="font-size: calc(1vw + 17px); font-weight: 600; margin-bottom: 30px">오케이창업 베스트매물</p>
+      <div class="container2"></div>
+    </div>
+
+    <script>
+      const data = [
+        {
+          src: "images/main/example.png",
+          title: "성공적인 매장 양도양수를 위한 5가지 필수 팁",
+          profit: 34000,
+          sales: 34000,
+          link: "",
+          consult: "",
+          tel: "010-0000-0000",
+          id: 100,
+        },
+        {
+          src: "images/main/example.png",
+          title: "성공적인 매장 양도양수를 위한 5가지 필수 팁",
+          profit: 34000,
+          sales: 34000,
+          link: "",
+          consult: "",
+          tel: "010-0000-0000",
+          id: 101,
+        },
+        {
+          src: "images/main/example.png",
+          title: "성공적인 매장 양도양수를 위한 5가지 필수 팁",
+          profit: 34000,
+          sales: 34000,
+          link: "",
+          consult: "",
+          tel: "",
+          id: 102,
+        },
+      ];
+      const container = document.querySelector(".container2");
+
+      data.forEach((item) => {
+        const card = document.createElement("a");
+        card.href = item.link;
+        card.className = "card2";
+
+        const imgDiv = document.createElement("div");
+        const img = document.createElement("img");
+        imgDiv.className = "img-div2";
+        img.src = item.src;
+        imgDiv.appendChild(img);
+
+        const title = document.createElement("p");
+        title.textContent = item.title;
+        title.className = "title2";
+
+        const profitDiv = document.createElement("div");
+        profitDiv.innerHTML = `<p style="color: #4B79EE"><span style="color: #4B79EE">월순수익</span> ${item.profit}만원</p> <p><span style="color: #767676">월총매출</span> ${item.sales}만원`;
+        profitDiv.className = "profit-div";
+
+        const buttonDiv = document.createElement("div");
+        buttonDiv.innerHTML = `
+    <a class='consult' href="main-consult.html?num=${item.id}">컨설팅신청</a>
+    <a class='tel' href="tel:${item.tel}">전화연결</a>
+  `;
+        buttonDiv.className = "button-div";
+
+        card.appendChild(imgDiv);
+        card.appendChild(title);
+        card.appendChild(profitDiv);
+        card.appendChild(buttonDiv);
+
+        container.appendChild(card);
+      });
+    </script>
+
+    <div style="width: 100%; display: flex; justify-content: center; margin-top: 150px">
+      <a href="menu01.html" style="display: flex; align-items: center; border: 1px solid #e5e5ec; padding: 3% 5%; border-radius: 100px">
+        <p>오케이창업 매물 더보기</p>
+        <img src="images/main/next.png" style="width: 16px; height: 16px" />
+      </a>
+    </div>
+
+    <div style="width: 100vw; margin-top: 150px">
+      <img src="images/banner.png" style="width: 100%" />
+    </div>
+  </body>
+</html>

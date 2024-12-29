@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style/menu01.css" />
+    <title>OK-MOBILE</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <a href="index.html"><img src="images/main/logo.png" /></a>
+      <div>
+        <input placeholder="검색어를 입력하시오." />
+        <img src="images/main/search.png" />
+      </div>
+    </div>
+
+    <!-- navigation -->
+    <div class="nav">
+      <a href="index.html">MAIN</a>
+      <a style="color: #4b79ee; font-weight: 500; border-bottom: 2px solid #4b79ee" href="menu01.html">매물정보</a>
+      <a href="menu02.html">창업 컨설팅</a>
+      <a href="menu03.html">창업정보</a>
+      <a href="menu04.html">신규창업소개</a>
+      <a href="menu05.html">회사소개</a>
+    </div>
+
+    <!-- search container -->
+    <div style="padding: 5%; display: flex; justify-content: center; align-items: center">
+      <div style="border: 2px solid #cacad7; border-radius: 10px; width: 100%; padding: 5%">
+        <div style="display: flex; align-items: center">
+          <img src="images/menu01/search.png" style="width: 16px; height: 16px" />
+          <p style="color: #f4aa6c; font-size: calc(11px + 0.5vw)">퀵 매물찾기</p>
+          <p style="border: 2px solid #e5e5ec; margin-left: 7px; padding: 3px 5px; font-size: calc(11px + 0.5vw)">#무엇이든</p>
+          <p style="border: 2px solid #e5e5ec; margin-left: 4px; padding: 3px 5px; font-size: calc(11px + 0.5vw)">#물건번호</p>
+        </div>
+        <input class="search-input1" style="width: 100%; margin-top: 5px" placeholder="검색어 입력" />
+        <div style="display: flex; justify-content: space-between">
+          <div class="list-container">
+            <input class="search-input" readonly placeholder="지역 시/도" />
+            <img src="images/menu01/down.png" class="btn" />
+            <ul class="list">
+              <li>강남구</li>
+              <li>광진구</li>
+              <li>서초구</li>
+              <li>송파구</li>
+            </ul>
+          </div>
+          <div class="list-container">
+            <input class="search-input" readonly placeholder="카테고리" />
+            <img src="images/menu01/down.png" class="btn" />
+            <ul class="list">
+              <li>소형카페</li>
+              <li>대형카페</li>
+              <li>베이커리</li>
+              <li>배달전문점</li>
+              <li>일반음식점</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 5px">
+          <div class="list-container">
+            <input class="search-input" readonly placeholder="㎡(평)" />
+            <img src="images/menu01/down.png" class="btn" />
+            <ul class="list">
+              <li>16㎡ (5평형)</li>
+              <li>33㎡ (10평형)</li>
+              <li>66㎡ (20평형)</li>
+            </ul>
+          </div>
+          <div class="list-container">
+            <input class="search-input" readonly placeholder="투자금액" />
+            <img src="images/menu01/down.png" class="btn" />
+            <ul class="list">
+              <li>5천만 원-1억</li>
+              <li>1억-2억</li>
+              <li>2억-3억</li>
+            </ul>
+          </div>
+        </div>
+        <button
+          style="
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            background-color: #4b79ee;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 0;
+          "
+        >
+          매물검색
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const btns = document.querySelectorAll(".btn"); // 모든 버튼 가져오기
+      const lists = document.querySelectorAll(".list"); // 모든 리스트 가져오기
+
+      btns.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          const list = lists[index];
+          const isVisible = list.style.display === "block";
+          // 리스트의 가시성을 토글
+          list.style.display = isVisible ? "none" : "block";
+        });
+      });
+
+      lists.forEach((list, index) => {
+        list.addEventListener("click", (e) => {
+          if (e.target.tagName === "LI") {
+            // 리스트 항목이 클릭되면 입력창에 값 설정
+            const input = document.querySelectorAll(".search-input")[index];
+            input.value = e.target.textContent;
+
+            // 리스트 숨기기
+            list.style.display = "none";
+          }
+        });
+      });
+
+      // 리스트 외부 클릭 시 닫기
+      document.addEventListener("click", (e) => {
+        btns.forEach((btn, index) => {
+          const list = lists[index];
+          if (!list.contains(e.target) && !btn.contains(e.target)) {
+            list.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <!-- HOT -->
+    <!-- 매물 두개 하드코딩 -->
+    <div style="padding: 0 5%; margin-top: 10px">
+      <div style="display: flex; justify-content: space-between">
+        <!-- 매물 1 -->
+        <div style="width: 49%">
+          <div style="position: relative; width: 100%" style="border-radius: 10px; overflow: hidden">
+            <img src="images/menu01/hot-tag.png" style="position: absolute; width: 45px; top: 0; left: 0" />
+            <img src="images/menu01/example.png" style="width: 100%" />
+          </div>
+
+          <p
+            style="
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+              padding: 3px;
+              font-size: calc(12px + 0.5vw);
+              margin-bottom: 5px;
+            "
+          >
+            경기도 육회바른연어 실패없는 성공창업
+          </p>
+
+          <p class="profit-container" style="color: #4b79ee"><span style="color: #4b79ee">월순수익</span> 34,000만원</p>
+          <p class="profit-container"><span>월총매출</span> 34,000만원</p>
+          <p class="profit-container"><span>총창업비용</span> 34,000만원</p>
+        </div>
+
+        <!-- 매물 2 -->
+        <div style="width: 49%">
+          <div style="position: relative; width: 100%" style="border-radius: 10px; overflow: hidden">
+            <img src="images/menu01/hot-tag.png" style="position: absolute; width: 45px; top: 0; left: 0" />
+            <img src="images/menu01/example.png" style="width: 100%" />
+          </div>
+
+          <p
+            style="
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+              padding: 3px;
+              font-size: calc(12px + 0.5vw);
+              margin-bottom: 5px;
+            "
+          >
+            경기도 육회바른연어 실패없는 성공창업
+          </p>
+
+          <p class="profit-container" style="color: #4b79ee"><span style="color: #4b79ee">월순수익</span> 34,000만원</p>
+          <p class="profit-container"><span>월총매출</span> 34,000만원</p>
+          <p class="profit-container"><span>총창업비용</span> 34,000만원</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 전체매물 -->
+
+    <div style="font-size: calc(19px + 0.5vw); font-weight: 600; padding: 0 5%; margin: 50px 0 10px">전체매물 검색결과</div>
+
+    <div class="main-container" style="padding: 0 5%; margin-top: 20px"></div>
+
+    <!-- 페이징 -->
+    <div style="padding: 0 5%; display: flex; align-items: center; justify-content: center; margin-top: 25px">
+      <img src="images/prev.png" style="width: 33px; height: 33px" class="prev-btn" onclick="previousPage()" />
+      <div class="page-container" style="margin: 0 10px; font-size: 12px; color: #767676"></div>
+      <img src="images/next.png" style="width: 33px; height: 33px" class="next-btn" onclick="nextPage()" />
+    </div>
+
+    <script>
+      const data = [
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 111,
+          tel: "010-0000-0000",
+          link: "menu01-detail.html",
+        },
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 112,
+          tel: "010-0000-0000",
+        },
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 113,
+          tel: "010-0000-0000",
+        },
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 211,
+          tel: "010-0000-0000",
+        },
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 212,
+          tel: "010-0000-0000",
+        },
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 213,
+          tel: "010-0000-0000",
+        },
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 311,
+          tel: "010-0000-0000",
+        },
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 312,
+          tel: "010-0000-0000",
+        },
+        {
+          title: "경기도 육회바른연어 실패없는 성공창업",
+          src: "images/example.png",
+          profit1: "34000만원",
+          profit2: "34000만원",
+          profit3: "34000만원",
+          num: 313,
+          tel: "010-0000-0000",
+        },
+      ];
+
+      const mainContainer = document.querySelector(".main-container");
+      const pageContainer = document.querySelector(".page-container");
+
+      const num = 6; // 한 페이지에 띄울 매물 수
+      let index = 1;
+
+      function updatePage() {
+        let pageData = data.slice((index - 1) * num, (index - 1) * num + num);
+
+        pageData.forEach((item) => {
+          // 매물 코드 짜기
+          const card = document.createElement("a");
+          card.style.display = "block";
+          card.href = `menu01-detail.html?num=${item.num}`;
+
+          card.innerHTML = `
+          <p style="font-size: calc(15px + 0.5vw); margin: 15px 0 5px">${item.title}</p>
+        <div style="display: flex; height: calc(100px + 3vw)">
+          <div style="width: 48%; border-radius: 10px; margin-right: 2%; overflow: hidden; height: 100%;">
+            <img src="${item.src}" style="width: 100%; height: 100%" />
+          </div>
+
+          <div
+            style="width: 50%; padding: 5px; font-size: calc(12px + 0.5vw); display: flex; flex-direction: column; justify-content: center"
+          >
+            <p style="margin-bottom: 5px"><span style="color: #4b79ee; margin-right: 10px">월순수익</span> ${item.profit1}</p>
+            <p style="margin-bottom: 5px"><span style="color: #767676; margin-right: 10px">월순수익</span> ${item.profit2}</p>
+            <p style="margin-bottom: 5px"><span style="color: #767676; margin-right: 10px">월순수익</span> ${item.profit3}</p>
+            <div style="width: 100%; display: flex; justify-content: space-between; margin-top: 10px">
+              <button
+              onClick="window.location.href = 'main-consult.html?num=${item.num}'"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 49%;
+                  background-color: #4b79ee;
+                  padding: 10px 0;
+                  color: white;
+                  border-radius: 5px;
+                "
+              >
+                컨설팅신청
+              </button>
+              <button
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 49%;
+                  background-color: #e5e5ec;
+                  padding: 10px 0;
+                  border-radius: 5px;
+                "
+              >
+                전화연결
+              </button>
+            </div>
+          </div>
+        </div>`;
+          mainContainer.appendChild(card);
+        });
+        pageContainer.textContent = `${index} / ${Math.ceil(data.length / num)}`;
+      }
+
+      function previousPage() {
+        if (index > 1) {
+          index--;
+          mainContainer.innerHTML = "";
+          updatePage();
+        }
+      }
+
+      function nextPage() {
+        const totalPages = Math.ceil(data.length / num);
+        if (index < totalPages) {
+          index++;
+          mainContainer.innerHTML = "";
+          updatePage();
+        }
+      }
+
+      updatePage();
+    </script>
+
+    <!-- bottom -->
+    <div style="width: 100vw; margin-top: 150px">
+      <img src="images/banner.png" style="width: 100%" />
+    </div>
+  </body>
+</html>

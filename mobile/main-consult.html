@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <title>Consult</title>
+  </head>
+  <body>
+    <div style="width: 100%; height: 100vh; background-color: #323232; display: flex; align-items: center; justify-content: center">
+      <div style="width: calc(300px + 10vw); padding: 5%; background-color: white">
+        <div style="width: 100%; display: flex; align-items: center; justify-content: space-between">
+          <p style="width: 5vw"></p>
+          <p style="font-size: calc(13px + 1vw)">문의내용</p>
+          <a href="index.html"><img src="images/main/close.png" style="width: 5vw; height: 5vw" /></a>
+        </div>
+
+        <div style="background-color: #f1f1f5; border-radius: 5px; margin-top: 30px; padding: 5%">
+          <p style="color: #767676; text-align: center; margin-top: 7%">[오케이창업, 창업성공을 위한 OK한 선택!]</p>
+          <div style="color: #767676; padding: 7%" id="query-display">Loading...</div>
+        </div>
+
+        <div style="margin: 20px 0">
+          <p style="margin-bottom: 5px">성함</p>
+          <input
+            style="width: 100%; padding: 10px; color: #cacad7; border: 1px solid #cacad7; border-radius: 3px"
+            placeholder="성함을 입력하세요"
+          />
+        </div>
+
+        <div style="margin: 20px 0">
+          <p style="margin-bottom: 5px">연락처</p>
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <input style="width: 30%; padding: 10px; color: #cacad7; border: 1px solid #cacad7; border-radius: 3px" />
+            <p>-</p>
+            <input style="width: 30%; padding: 10px; color: #cacad7; border: 1px solid #cacad7; border-radius: 3px" />
+            <p>-</p>
+            <input style="width: 30%; padding: 10px; color: #cacad7; border: 1px solid #cacad7; border-radius: 3px" />
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center">
+          <button style="background-color: #4b79ee; color: white; padding: 10px 50px; margin: 10px; border-radius: 20px">창업의뢰</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // URL에서 쿼리값 추출
+      const params = new URLSearchParams(window.location.search);
+      const num = params.get("num");
+
+      // 쿼리값을 페이지에 표시
+      const queryDisplay = document.getElementById("query-display");
+      if (num) {
+        queryDisplay.textContent = `오케이창업주식회사 ${num}번 창업상품에 대하여, 창업상담을 요청합니다.`;
+      } else {
+        queryDisplay.textContent = "창업상품 정보를 확인할 수 없습니다.";
+      }
+    </script>
+  </body>
+</html>

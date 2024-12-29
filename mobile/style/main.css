@@ -1,0 +1,248 @@
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: calc(180px + 10vw);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider img {
+  width: 100vw;
+  height: calc(180px + 10vw);
+
+  flex-shrink: 0;
+}
+
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  a {
+    width: 19%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.scroll-container {
+  display: flex;
+  padding-top: 15px;
+  white-space: nowrap;
+  overflow-x: auto;
+
+  a {
+    color: #505050;
+    font-size: calc(13px + 1vw);
+    margin-right: 7%;
+    padding-bottom: 15px;
+    border-bottom: 3px solid white;
+  }
+}
+
+.popular-container {
+  display: flex;
+  padding-top: 18px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.best-item {
+  margin-right: 3%;
+  border: 1px solid #cacad7;
+  border-radius: 20px;
+}
+
+.img-div {
+  width: calc(2vw + 220px);
+  height: 148px;
+  img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+  }
+}
+
+.text-div {
+  width: calc(2vw + 220px);
+  margin-bottom: 15px;
+  .title {
+    font-size: calc(12px + 1vw);
+    margin: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: calc(9px + 1vw);
+  }
+
+  p > span {
+    width: 60px;
+    padding: 1px 2px;
+    text-align: center;
+    background-color: #f7f7fb;
+    color: #999999;
+  }
+}
+
+.info-nav {
+  a {
+    color: #505050;
+    font-size: calc(13px + 1vw);
+    margin-right: 7%;
+    padding-bottom: 15px;
+    border-bottom: 3px solid white;
+  }
+}
+
+.container2 {
+  .card2 {
+    width: 90vw;
+    height: 320px;
+    border: 1px solid #cacad7;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .img-div2 {
+    width: 100%;
+    height: 170px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      overflow: hidden;
+    }
+  }
+
+  .title2 {
+    font-size: calc(15px + 1vw);
+    margin: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .profit-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: calc(10px + 1vw);
+
+    span {
+      width: 60px;
+      padding: 1px 2px;
+      text-align: center;
+      background-color: #f7f7fb;
+    }
+  }
+
+  .button-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: calc(11px + 1vw);
+    a {
+      width: 48%;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f1f1f5;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .consult {
+      background-color: #4b79ee;
+      color: white;
+    }
+  }
+}
+
+.new-slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: calc(180px + 10vw);
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* 버튼이 다른 요소 위에 나타나도록 */
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.new-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: calc(180px + 10vw);
+}
+
+.new-slider img {
+  width: 100vw;
+  height: calc(180px + 10vw);
+  flex-shrink: 0;
+}
+
+.news-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100vw;
+  padding: 10% 12vw;
+  box-sizing: border-box;
+}
+
+.news-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: calc(13px + 1vw);
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 76vw;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 3줄로 제한 */
+  -webkit-box-orient: vertical; /* 세로 방향으로 정렬 */
+  overflow: hidden; /* 넘치는 텍스트 숨기기 */
+  text-overflow: ellipsis; /* 넘친 텍스트를 '...'으로 표시 */
+  text-align: justify;
+  color: #767676;
+  margin-bottom: 20px;
+  width: 76vw;
+}
+
+.date {
+  color: #767676;
+}
