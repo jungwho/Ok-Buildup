@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="style/menu01.css" />
+    <link rel="stylesheet" href="style/detail.css" />
     <title>OK-MOBILE</title>
   </head>
   <body>
@@ -32,6 +33,10 @@
       // URL에서 쿼리값 추출
       const params = new URLSearchParams(window.location.search);
       const num = params.get("num"); // 매물 번호
+
+      const onClickConsult = () => {
+        window.location.href = `main-consult.html?num=${num}`;
+      };
     </script>
 
     <!-- 메인페이지 -->
@@ -44,9 +49,126 @@
         <p style="font-size: calc(14px + 0.5vw); color: #767676">사업체 위치：부평구</p>
         <p style="font-size: calc(14px + 0.5vw); color: #767676">사업체 크기：46.2㎡ (약 14평형) / 1층</p>
         <p style="font-size: calc(14px + 0.5vw); color: #767676">헌업종：죽전문점</p>
+        <div style="display: flex; justify-content: space-between; margin-top: 20px">
+          <div class="profit-box">
+            <p style="color: #4b79ee; margin-bottom: 5px">총창업비용</p>
+            <p style="color: #4b79ee">36000만원</p>
+          </div>
+          <div class="profit-box">
+            <p style="margin-bottom: 5px">월수익</p>
+            <p>1000만원</p>
+          </div>
+          <div class="profit-box">
+            <p style="margin-bottom: 5px">총창업비용</p>
+            <p>36000만원</p>
+          </div>
+        </div>
+        <p style="font-size: calc(19px + 0.5vw); font-weight: 600; margin: 40px 0 5px">소경순 창업전문가</p>
+        <p style="font-size: calc(14px + 0.5vw); color: #767676; margin-left: 5px">연락처 010-4719-2321</p>
+        <button onClick="onClickConsult()" class="consult-button">
+          <p>무료창업컨설팅 신청</p>
+          <img style="width: calc(8px + 0.5vw)" src="images/menu01/next.png" />
+        </button>
       </div>
-      <div style="display: flex; justify-content: space-between">
-        <div></div>
+    </div>
+
+    <!-- 매출내역 -->
+    <p class="title">매출내역</p>
+    <div class="container">
+      <div class="box">
+        <p style="margin-right: 30px; color: #4b79ee">월매출</p>
+        <p style="color: #4b79ee">6000만원</p>
+      </div>
+      <div class="box">
+        <p style="margin-right: 30px">월지출</p>
+        <p>6000만원</p>
+      </div>
+      <div class="box">
+        <p style="margin-right: 30px">월수익</p>
+        <p>6000만원</p>
+      </div>
+    </div>
+
+    <!-- 평균 월 매출 세부내역 -->
+    <p class="title">평균 월 매출 세부내역</p>
+    <div class="container">
+      <div class="box">
+        <p style="margin-right: 30px">월매출</p>
+        <div>
+          <p>6000만원</p>
+          <div class="bar">
+            <div style="width: 38%; background-color: #81a2ea"></div>
+            <p>38%</p>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <p style="margin-right: 30px">월지출</p>
+        <div>
+          <p>6000만원</p>
+          <div class="bar">
+            <div style="width: 38%; background-color: #acbee5"></div>
+            <p>38%</p>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <p style="margin-right: 30px">월수익</p>
+        <div>
+          <p>6000만원</p>
+          <div class="bar">
+            <div style="width: 38%; background-color: #9e98ed"></div>
+            <p>38%</p>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <p style="margin-right: 30px">월수익</p>
+        <div>
+          <p>6000만원</p>
+          <div class="bar">
+            <div style="width: 38%; background-color: #7070e5"></div>
+            <p>38%</p>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <p style="margin-right: 30px">월수익</p>
+        <div>
+          <p>6000만원</p>
+          <div class="bar">
+            <div style="width: 38%; background-color: #78ddf4"></div>
+            <p>38%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 해당 사업체 상세설명 -->
+    <p class="title">해당 사업체 상세설명</p>
+    <div style="padding: 0 5%">
+      <div class="text-container">
+        안녕하세요 소경순 대표입니다. 우리나라에는 수많은 프랜차이즈 매장이 있습니다. 그 중 본인에게 알맞는 브랜드를 찾는 것은 많은 시간과
+        노력이 필요합니다. 업종, 상권, 예산 등에 따라 가장 합리적이고 최상의 매장을 이어드리겠습니다. 본죽 앤 비빔밥 사업체 소개 ▷ 월 평균
+        매출 6000만 이상 (POS 자료 12개월 평균으로 계산) ▷ 인천 부평구에 위치 ▷ 직접 운영시 순이익 만 내외 매장 상권 및 설명 ▷ 주변 대단지
+        아파트 밀집지역, 역세권, 학교 위치해있습니다. ▷ 현재 위치에서 14년 이상 본죽 브랜드 운영 ▷ 오토 운영중인 매장 입니다. ▷매출
+        유지중이며 증빙 가능한 매장 입니다. ▷ 2019년도 리뉴얼한 매장 입니다. 창업 절차 ① 전화 및 문자 상담 : 기본적인 상담을 통한 선호 업종,
+        지역 상담 ② 업종 및 아이템 선정 : 고객님의 성향과 예산에 따라 업종 및 아이템 선정 후 상권분석, 매출확인 및 세부사항 파악 ③ 현장 미팅
+        : 실시간으로 매장 현장 확인 (매출자료, 상권 및 유동인구 파악) ④ 사업체 계약 : 해당 사업체의 등기부등본, 건축물대장 등 직접 확인 후
+        계약 체결 ⑤ 창업 완료 및 사후 관리 : 양도 양수시 인수인계, 매장 관리, 노하우 전수 ☏ 소경순 대표이사 : 010-4719-2321 ▶ 예산으로 인해
+        고민이신 분들 ▶ 초보창업이라 걱정 많으신 분들 ▶ 위치가 고민이신 분들 ▶ 성공창업을 희망하는 분들 ▶ 매장이 마음에 들지만 거리나 예산의
+        문제가 있으신 분들 비슷한 조건의 전국 매장을 다수 보유하고 있습니다. 365일 24시간 상담가능하니 편하게 연락주세요. ※ 매장 사진은
+        실제와 다를 수 있습니다.
+      </div>
+    </div>
+
+    <!-- 소경순 창업전문가 소개 -->
+    <p class="title">소경순 창업전문가 소개</p>
+    <div style="padding: 0 5%">
+      <div class="text-container">
+        대부분의 창업자들이 큰 희망을 갖고 시작하고 있으나 대부분 준비되지 않은 채 시작함으로써 스스로의 한계에 부딪혀 포기하거나 중도에
+        실패를 하게되는 경우가 많습니다. 창업에는 참 많은 준비가 필요합니다. 진정 '전문가'라 할 수 있는 경력과 실력을 갖춘 컨설턴트와 함께
+        하신다면 '성공창업'이 현실로 다가옵니다. 그 시작의 중심에 제가 있겠습니다.
       </div>
     </div>
 

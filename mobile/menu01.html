@@ -196,7 +196,6 @@
     <!-- 전체매물 -->
 
     <div style="font-size: calc(19px + 0.5vw); font-weight: 600; padding: 0 5%; margin: 50px 0 10px">전체매물 검색결과</div>
-
     <div class="main-container" style="padding: 0 5%; margin-top: 20px"></div>
 
     <!-- 페이징 -->
@@ -305,6 +304,7 @@
           // 매물 코드 짜기
           const card = document.createElement("a");
           card.style.display = "block";
+          card.style.marginBottom = "20px";
           card.href = `menu01-detail.html?num=${item.num}`;
 
           card.innerHTML = `
@@ -317,38 +317,38 @@
           <div
             style="width: 50%; padding: 5px; font-size: calc(12px + 0.5vw); display: flex; flex-direction: column; justify-content: center"
           >
-            <p style="margin-bottom: 5px"><span style="color: #4b79ee; margin-right: 10px">월순수익</span> ${item.profit1}</p>
-            <p style="margin-bottom: 5px"><span style="color: #767676; margin-right: 10px">월순수익</span> ${item.profit2}</p>
-            <p style="margin-bottom: 5px"><span style="color: #767676; margin-right: 10px">월순수익</span> ${item.profit3}</p>
-            <div style="width: 100%; display: flex; justify-content: space-between; margin-top: 10px">
-              <button
-              onClick="window.location.href = 'main-consult.html?num=${item.num}'"
+            <p style="margin: 4px 0"><span style="color: #4b79ee; margin-right: 10px">월순수익</span> ${item.profit1}</p>
+            <p style="margin-bottom: 4px"><span style="color: #767676; margin-right: 10px">월순수익</span> ${item.profit2}</p>
+            <p><span style="color: #767676; margin-right: 10px">월순수익</span> ${item.profit3}</p>
+            <div style="width: 100%; display: flex; justify-content: space-between; margin-top: 8px">
+              <a href='main-consult.html?num=${item.num}'
                 style="
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   width: 49%;
                   background-color: #4b79ee;
-                  padding: 10px 0;
+                  padding: 8px 0;
                   color: white;
                   border-radius: 5px;
                 "
               >
                 컨설팅신청
-              </button>
-              <button
+              </a>
+              <a
+               href="tel:${item.tel}"
                 style="
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   width: 49%;
                   background-color: #e5e5ec;
-                  padding: 10px 0;
+                  padding: 8px 0;
                   border-radius: 5px;
                 "
               >
                 전화연결
-              </button>
+              </a>
             </div>
           </div>
         </div>`;

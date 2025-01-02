@@ -1,8 +1,87 @@
 .profit-box {
   width: 31%;
+  aspect-ratio: 1;
   background-color: #f1f1f5;
   display: flex;
-
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: calc(14px + 0.5vw);
+  border-radius: 5px;
+}
+
+.consult-button {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #4b79ee;
+  padding: 15px 0;
+
+  p {
+    color: white;
+    font-size: calc(17px + 0.5vw);
+    margin-right: 5px;
+  }
+
+  img {
+    width: 15px;
+  }
+}
+
+.title {
+  font-size: calc(19px + 0.5vw);
+  font-weight: 600;
+  margin: 30px 5% 10px;
+}
+
+.container {
+  padding: 0 5%;
+  margin-bottom: 50px;
+  .box {
+    border-bottom: 1px solid #f1f1f5;
+    display: flex;
+    align-items: center;
+    padding: 3.5% 10%;
+  }
+
+  p {
+    font-size: calc(15px + 0.5vw);
+  }
+
+  .bar {
+    width: calc(140px + 10vw);
+    height: 15px;
+    background-color: #d9d9d9;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    div {
+      height: 100%;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    p {
+      position: absolute;
+      left: calc(100% + 10px);
+      color: #111111;
+      font-size: calc(11px + 0.5vw);
+    }
+  }
+}
+
+.text-container {
+  padding: 5%;
+  background-color: #f7f7fb;
+  text-align: justify;
+  line-height: 1.5;
+  color: #505050;
+  font-size: calc(13px + 0.5vw);
 }

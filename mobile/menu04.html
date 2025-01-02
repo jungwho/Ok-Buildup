@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style/menu04.css" />
+
     <title>OK-MOBILE</title>
   </head>
   <body>
@@ -26,6 +28,43 @@
       <a href="menu05.html">회사소개</a>
     </div>
 
-    <div></div>
+    <!-- header -->
+    <div style="width: 100%">
+      <img src="images/menu04/header.png" style="width: 100%" />
+    </div>
+
+    <!-- main -->
+    <p class="title">신규창업아이템</p>
+    <div class="main-container" style="padding: 0 5%; margin-top: 20px"></div>
+
+    <!-- 페이징 -->
+    <div style="padding: 0 5%; display: flex; align-items: center; justify-content: center; margin-top: 25px">
+      <img src="images/prev.png" style="width: 33px; height: 33px" class="prev-btn" onclick="previousPage()" />
+      <div class="page-container" style="margin: 0 10px; font-size: 12px; color: #767676"></div>
+      <img src="images/next.png" style="width: 33px; height: 33px" class="next-btn" onclick="nextPage()" />
+    </div>
+
+    <!-- 데이터 삽입 -->
+    <script>
+      const data = [
+        { src: "images/example.png", title: "돈돈정", description: "01. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "02. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "03. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "04. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "05. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "06. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "07. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "08. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "09. 직장인들의 든든한 한끼", link: "" },
+        { src: "images/example.png", title: "돈돈정", description: "10. 직장인들의 든든한 한끼", link: "" },
+      ];
+    </script>
+
+    <script src="script/menu04.js"></script>
+
+    <!-- bottom -->
+    <div style="width: 100vw; margin-top: 150px">
+      <img src="images/banner.png" style="width: 100%" />
+    </div>
   </body>
 </html>

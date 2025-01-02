@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style/menu05.css" />
+
+    <title>OK-MOBILE</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <a href="index.html"><img src="images/main/logo.png" /></a>
+      <div>
+        <input placeholder="검색어를 입력하시오." />
+        <img src="images/main/search.png" />
+      </div>
+    </div>
+
+    <!-- navigation -->
+    <div class="nav">
+      <a href="index.html">MAIN</a>
+      <a href="menu01.html">매물정보</a>
+      <a href="menu02.html">창업 컨설팅</a>
+      <a href="menu03.html">창업정보</a>
+      <a href="menu04.html">신규창업소개</a>
+      <a style="color: #4b79ee; font-weight: 500; border-bottom: 3px solid #4b79ee" href="menu05.html">회사소개</a>
+    </div>
+
+    <!-- header -->
+    <div style="width: 100%; height: calc(120px + 7vw); display: flex; align-items: center; justify-content: center">
+      <img src="images/menu05/header.png" style="width: 100%; height: 100%" />
+      <p style="font-size: calc(20px + 0.7vw); color: white; position: absolute; font-weight: 600">회사소개</p>
+    </div>
+
+    <!-- intro-nav -->
+    <div class="intro-nav">
+      <a href="menu05.html" class="box">CEO 인사말</a>
+      <a href="menu05-02.html" style="font-weight: 600; border-color: black" class="box">오시는길</a>
+    </div>
+    <p class="title">오시는길</p>
+
+    <!-- map -->
+    <div style="display: flex; justify-content: center">
+      <div style="width: 90%" id="daumRoughmapContainer1729441314707" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+    </div>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script charset="UTF-8">
+      new daum.roughmap.Lander({
+        timestamp: "1729441314707",
+        key: "2ky29",
+      }).render();
+    </script>
+
+    <!-- map-info -->
+    <div class="map-container">
+      <div class="map-title">주소</div>
+      <div class="map-box">
+        <p class="left">주소</p>
+        <p>서울 서초구 잠원동 37-12 5층</p>
+      </div>
+      <div class="map-box">
+        <p class="left">도로명주소</p>
+        <p>서울 서초구 신반포로 339 바바논현빌딩 5층</p>
+      </div>
+      <div class="map-box">
+        <p class="left">TEL</p>
+        <p>02-540-2321</p>
+      </div>
+      <div class="map-box">
+        <p class="left">FAX</p>
+        <p>02-517-3300</p>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <div class="map-title">오시는 교통편</div>
+      <div class="map-box">
+        <p class="left">버스</p>
+        <div style="margin-top: 15px">
+          <p>논현사거리(22190)</p>
+          <p>142, 148, 360, 401, 452, 640</p>
+        </div>
+      </div>
+      <div class="map-box">
+        <p class="left">지하철</p>
+        <div style="margin-top: 15px; width: 75%">7호선 논현역 7번출구앞, 3호선 신사역 4번출구 직진 450미터</div>
+      </div>
+      <div class="map-box">
+        <p class="left">주차</p>
+        <p>본건물 전면, 후면</p>
+      </div>
+    </div>
+
+    <!-- bottom -->
+    <div style="width: 100vw; margin-top: 150px">
+      <img src="images/banner.png" style="width: 100%" />
+    </div>
+  </body>
+</html>
