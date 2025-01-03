@@ -112,46 +112,106 @@
         <input placeholder="검색어를 입력하세요." />
       </div>
     </div>
-    
+
     <div style="padding: 0 15%">
       <div>
         <img src="images/banner.png" style="width: 100%" />
       </div>
     </div>
-  </div>
 
-  <div style="padding: 0 15%">
-    <p style="margin: 120px 0 80px; font-size: 38px; font-weight: 600">신규창업소개</p>
-    <div class="item-container">
-      <div class="item-box">
-        <img src="images/example.png"/>
-        <div class="text-container">
-          <p style="font-size: 16px; font-weight: 600; margin: 10px 0">공차</p>
-          <p style="font-size: 14px; color: #505050; margin: 10px 0">감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시</p>
-          <p ><span style="border: 1px solid #E5E5EC; padding: 5px; font-size: 13px">#대형카페</span></p>
-          <div class="btn-container">
-            <button style="background-color: #E5E5EC;">보러가기</button>
-            <button style="background-color: #4B79EE; color: white">상담문의</button>
-          </div>
-        </div>
-      </div>
-
+    <div style="padding: 0 15%">
+      <p style="margin: 120px 0 80px; font-size: 38px; font-weight: 600">신규창업소개</p>
+      <div class="item-container"></div>
     </div>
-  </div>
 
+    <div class="youtube-container">
+      <p style="font-size: 38px; font-weight: 600">신규 브랜드 소개영상</p>
+      <p style="font-size: 22px; margin-top: 15px">2025년 신규브랜드 에디션 출시!</p>
+      <a target="_blank" href="https://www.youtube.com/@%EC%98%A4%EC%BC%80%EC%9D%B4%EC%B0%BD%EC%97%85%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC"
+        ><img src="images/youtube.png"
+      /></a>
+    </div>
 
-  <div>
-    <img src="../../public/images/main/bottom-img.png"/>
-  </div>
-  <script>
-    const newsContainer = document.querySelector(".item-container");
-    const originalBox = document.querySelector(".item-box");
-    const numberOfBoxes = 14;
+    <div>
+      <img src="../../public/images/main/bottom-img.png" />
+    </div>
+    <script>
+      const itemContainer = document.querySelector(".item-container");
 
-    for (let i = 1; i < numberOfBoxes; i++) {
-      const clonedBox = originalBox.cloneNode(true);
-      newsContainer.appendChild(clonedBox);
-    }
-  </script>
+      const data = [
+        {
+          src: "images/example.png",
+          title: "공차",
+          description: "감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시",
+          category: "대형카페",
+          link: "",
+        },
+        {
+          src: "images/example.png",
+          title: "공차",
+          description: "감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시",
+          category: "대형카페",
+          link: "",
+        },
+        {
+          src: "images/example.png",
+          title: "공차",
+          description: "감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시",
+          category: "대형카페",
+          link: "",
+        },
+        {
+          src: "images/example.png",
+          title: "공차",
+          description: "감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시",
+          category: "대형카페",
+          link: "",
+        },
+        {
+          src: "images/example.png",
+          title: "공차",
+          description: "감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시",
+          category: "대형카페",
+          link: "",
+        },
+        {
+          src: "images/example.png",
+          title: "공차",
+          description: "감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시",
+          category: "대형카페",
+          link: "",
+        },
+        {
+          src: "images/example.png",
+          title: "공차",
+          description: "감각적인 스타일 책장 감각적인 스타일 SALE 23년 봄 신상품 출시",
+          category: "대형카페",
+          link: "",
+        },
+      ];
+
+      itemContainer.innerHTML = "";
+
+      data.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = "item-box";
+
+        card.innerHTML = `
+        <img src="images/example.png" />
+          <div class="text-container">
+            <p style="font-size: 16px; font-weight: 600; margin: 10px 0">${item.title}</p>
+            <p style="font-size: 14px; color: #505050; margin: 10px 0">${item.description}</p>
+            <p><span style="border: 1px solid #e5e5ec; padding: 5px; font-size: 13px">#${item.category}</span></p>
+            <div class="btn-container">
+              <button style="background-color: #e5e5ec" onclick='window.location.href = ${item.link}'>보러가기</button>
+              <button style="background-color: #4b79ee; color: white" onclick="window.location.href='../consult/index.html'">
+                상담문의
+              </button>
+            </div>
+          </div>`;
+
+        itemContainer.appendChild(card);
+      });
+    </script>
   </body>
 </html>

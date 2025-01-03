@@ -29,3 +29,21 @@
     font-size: 14px;
   }
 }
+
+.youtube-container {
+  background-color: #f1f1f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 838px;
+  width: 100%;
+
+  a {
+    width: 35%;
+    margin-top: 15px;
+    img {
+      width: 100%;
+    }
+  }
+}

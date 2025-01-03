@@ -73,7 +73,7 @@
     width: 32%;
     height: 18vw;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5ec;
     margin-bottom: 15px;
   }
 
@@ -149,7 +149,7 @@
 
 .bottom-left {
   position: absolute;
-  left: 10%;
+  left: 20%;
   top: 50%;
 }
 
@@ -161,7 +161,7 @@
 
 .bottom-right {
   position: absolute;
-  right: 10%;
+  right: 20%;
   top: 50%;
 }
 

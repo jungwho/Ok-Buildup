@@ -4,13 +4,11 @@
   overflow: hidden;
 }
 
-.banner-image {
-  display: none;
-  width: 100%;
-  height: auto;
-  transition: transform 0.5s ease-in-out;
+.banner-slider {
+  display: flex;
 }
 
-.banner .banner-image.active {
-  display: block;
+.banner-image {
+  width: 100%;
+  height: auto;
 }

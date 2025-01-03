@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="page/main/style/banner.css" />
     <link rel="stylesheet" href="page/main/style/imgNav.css" />
     <link rel="stylesheet" href="page/main/style/popular.css" />
+    <link rel="stylesheet" href="new/style.css" />
     <title>Home</title>
   </head>
   <body>
@@ -116,41 +117,55 @@
     </div>
   </body>
 
-  <!-- banner -->
   <div class="banner">
-    <!-- banner images 넣기 -->
-    <img class="banner-image" src="public/images/main/banner/banner.png" />
-    <img class="banner-image" src="public/images/main/banner/banner22.png" />
-    <!-- banner images 넣기 -->
+    <div class="banner-slider">
+      <!-- banner images 넣기 -->
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-01.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-02.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-03.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-04.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-05.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-06.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-07.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-09.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-10.png" />
+      <img class="banner-image" src="new/images/top/APDLS 메인 배너 최종 wlsgod-11.png" />
+      <!-- banner images 넣기 -->
+    </div>
   </div>
 
   <script>
-    const images = document.querySelectorAll(".banner-image");
-    let currentIndex = 0;
+    document.addEventListener("DOMContentLoaded", () => {
+      const bannerSlider = document.querySelector(".banner-slider");
+      const bannerImages = document.querySelectorAll(".banner-image");
 
-    function slideToNextImage() {
-      const previousIndex = currentIndex;
-      currentIndex = (currentIndex + 1) % images.length; // 다음 이미지 인덱스 계산
+      let currentIndex = 0;
+      const totalImages = bannerImages.length;
 
-      // 이전 이미지와 현재 이미지를 슬라이드 효과로 표시
-      images[previousIndex].style.transform = "translateX(100%)"; // 오른쪽으로 이동
-      images[previousIndex].classList.remove("active");
-      images[currentIndex].style.transform = "translateX(0)"; // 중앙으로 이동
-      images[currentIndex].classList.add("active");
-    }
+      function slideToNextImage() {
+        // Calculate the width of each image (assuming they are the same width)
+        const bannerWidth = bannerImages[0].clientWidth;
 
-    // 초기 상태 설정
-    images.forEach((img, index) => {
-      if (index === 0) {
-        img.style.transform = "translateX(0)";
-        img.classList.add("active");
-      } else {
-        img.style.transform = "translateX(100%)"; // 오른쪽에 배치
+        // Move to the next image
+        currentIndex++;
+
+        // Apply the transform to slide the images
+        bannerSlider.style.transition = "transform 1s ease";
+        bannerSlider.style.transform = `translateX(-${currentIndex * bannerWidth}px)`;
+
+        // If we reach the end, reset to the first image with no transition
+        if (currentIndex >= totalImages) {
+          setTimeout(() => {
+            bannerSlider.style.transition = "none";
+            bannerSlider.style.transform = "translateX(0)";
+            currentIndex = 0;
+          }, 500); // Wait for the transition to complete
+        }
       }
-    });
 
-    // 3초 간격으로 이미지 슬라이드
-    setInterval(slideToNextImage, 3000);
+      // Automatically slide every 3 seconds
+      setInterval(slideToNextImage, 4000);
+    });
   </script>
 
   <!-- Image Navigation -->
@@ -172,7 +187,7 @@
   <div class="popular-container">
     <!-- Left-container -->
     <div class="left-container">
-      <p class="title">오케이창업</p>
+      <img src="public/images/main/logo.png" />
       <p class="title2">화제의 아이템</p>
       <div class="button-container">
         <button class="button" id="1">
@@ -398,46 +413,48 @@
     }
   </script>
 
-  <!-- bottom banner -->
-  <div class="bottom-banner">
-    <img class="bottom-left" src="public/images/main/bottomBanner/left.png" />
-    <img class="bottom-right" src="public/images/main/bottomBanner/right.png" />
-    <div class="slider-wrapper">
-      <p class="bottom-title">창업정보</p>
-      <div class="slider">
-        <!-- bottom banner image 넣기 -->
-        <img class="bottom-banner-img" src="public/images/main/banner/banner.png" />
-        <img class="bottom-banner-img" src="public/images/main/banner/banner.png" />
-        <img class="bottom-banner-img" src="public/images/main/banner/banner.png" />
-        <!-- bottom banner image 넣기 -->
+  <!-- Refactoring -->
+
+  <!-- 신규창업아이템 -->
+  <div style="padding: 0 15%; margin-top: 180px">
+    <p style="font-size: 36px; font-weight: 600; color: #4b79ee; margin-bottom: 20px">신규창업아이템</p>
+    <div class="container">
+      <img src="new/images/left.png" class="btn" id="left-button" onClick="onClickPrev1()" />
+      <div style="width: 85%; overflow: hidden">
+        <div class="slider" id="new-img-slider">
+          <img src="new/images/item/APDLS 메인 배너 최종 wlsgod-08.png" />
+          <img src="new/images/item/APDLS 메인 배너 최종 wlsgod-12.png" />
+        </div>
       </div>
+      <img src="new/images/right.png" class="btn" id="right-button" onClick="onClickNext1()" />
     </div>
   </div>
 
-  <script>
-    const slider = document.querySelector(".slider");
-    const leftButton = document.querySelector(".bottom-left");
-    const rightButton = document.querySelector(".bottom-right");
-    let currentIndex2 = 0;
+  <script src="new/item-script.js"></script>
 
-    rightButton.addEventListener("click", () => {
-      const totalSlides = slider.children.length;
-      if (currentIndex2 < totalSlides - 1) {
-        currentIndex2++;
-        slider.style.transform = `translateX(-${currentIndex2 * 100}%)`;
-      }
-    });
+  <!-- 창업정보 -->
+  <div style="padding: 0 15%; margin-top: 180px; position: relative">
+    <img src="new/images/info/background.png" style="position: absolute; left: 0; top: 70%; width: 100%; z-index: -1" />
+    <p style="font-size: 36px; font-weight: 600; color: #4b79ee; margin-bottom: 20px">창업정보</p>
+    <div style="display: flex; margin-bottom: 30px">
+      <button class="info-nav" onClick="onClickInfo(0, data01)">창업뉴스</button>
+      <button class="info-nav" onClick="onClickInfo(1, data02)">창업분석</button>
+      <button class="info-nav" onClick="onClickInfo(2, data03)">창업아이템</button>
+    </div>
+    <div class="container">
+      <img src="new/images/left.png" class="btn" id="left-button2" onClick="onClickPrev2()" />
+      <div style="width: 85%; overflow: hidden">
+        <div class="info-slider"></div>
+      </div>
+      <img src="new/images/right.png" class="btn" id="right-button2" onClick="onClickNext2()" />
+    </div>
+  </div>
 
-    leftButton.addEventListener("click", () => {
-      if (currentIndex2 > 0) {
-        currentIndex2--;
-        slider.style.transform = `translateX(-${currentIndex2 * 100}%)`;
-      }
-    });
-  </script>
+  <script src="new/info-script.js"></script>
+  <!-- Refactoring -->
 
   <!-- best container -->
-  <div class="best-container">
+  <div class="best-container" style="margin-top: 200px">
     <p><span>오케이창업 </span>베스트 상품</p>
     <div class="best-item-container"></div>
     <div class="more">
