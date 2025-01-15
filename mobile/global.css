@@ -4,6 +4,12 @@
   font-style: normal2;
 }
 
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+}
+
 * {
   font-family: "pretendard";
   text-decoration: none;
@@ -11,6 +17,8 @@
   padding: 0;
   color: black;
   box-sizing: border-box;
+  animation: fading 0.5s;
+  transition: 0.25s;
 }
 
 body {
